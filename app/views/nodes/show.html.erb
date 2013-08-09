@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Category:</b>
+  <%= @node.category_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @node.name %>
+</p>
+
+<p>
+  <b>Contact:</b>
+  <%= @node.contact %>
+</p>
+
+<p>
+  <b>Street:</b>
+  <%= @node.street %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @node.city %>
+</p>
+
+
+<%= link_to 'Edit', edit_node_path(@node) %> |
+<%= link_to 'Back', nodes_path %>

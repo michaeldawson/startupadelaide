@@ -1,0 +1,14 @@
+// Place all the styles related to the nodes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+<% Category.all.each do |category| %>
+
+.<%= category.cat_class %> {
+    background: none repeat scroll 0 0 #<%= "%06x" % (rand * 0xffffff) %>;
+}
+
+<% end %>

@@ -1,0 +1,17 @@
+
+<% content_for :main do %>
+
+<%= render 'layouts/header' %>
+
+<article class="pt-page pt-page-<%= @number %> bg-image<%= @number %>" id="<%= @page_id %>">
+	<div class="outer-wrapper overlay-blue">
+
+		<%= yield(:page_content) %>
+
+		<div class="push"><!--//--></div><!--Ryan Fait's Sticky Footer-->
+	</div>
+</article>
+
+<%= render 'layouts/footer' %>
+
+<% end %>

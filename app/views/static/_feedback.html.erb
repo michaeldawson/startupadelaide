@@ -1,0 +1,36 @@
+
+<!--Feedback Screen-->
+<article class="pt-page pt-page-7 bg-image6" id="feedback">
+  <div class="outer-wrapper overlay-brown">
+    <%= render 'layouts/header', :@header => "Feedback" %>
+    <!--Content-->
+    <section class="row-fluid">
+      <div class="container">
+        <form method="post" name="feedback-form" id="feedback-form" class="addspace clearfix">
+          <fieldset class="span6">
+            <span id="sprytextfield1">
+              <input type="text" name="name" id="name">
+            </span>
+            <span id="sprytextfield2">
+              <input type="text" name="email" id="email">
+            </span>
+          </fieldset>
+          <fieldset class="span6">
+            <span id="sprytextarea1">
+              <textarea name="message" id="message" cols="45" rows="5"></textarea>
+            </span>
+          </fieldset>
+          <input name="submit" type="submit" class="submit" id="submit" value="Submit">
+          <div id="success"></div>
+        </form>
+      </div>
+    </section>
+    <div class="push"><!--//--></div><!--Ryan Fait's Sticky Footer-->
+  </div>
+  <!--Footer-->
+  <footer>
+    <div class="container">
+      <p>Copyright &copy; ItemBridge inc., 2013</p>
+    </div>
+  </footer>
+</article>

@@ -1,0 +1,42 @@
+<!--Home Screen-->
+<article class="pt-page pt-page-1 bg-image1" id="home">
+  <div class="outer-wrapper">
+    <!--Header-->
+    <header class="row-fluid">
+      <div class="container">
+        <div class="span8 logo">
+          <h1>Startup Adelaide</h1>
+        </div>
+        <div class="span4">
+          <h2>(an explorer's guide)</h2>
+        </div>
+      </div>
+    </header>
+    <!--Navigation-->
+    <nav class="navi row-fluid transparent">
+      <div class="container">
+        <div class="span12 clearfix">
+          <div class="span4">
+            <a class="small-navi about page-transition" href="#about" onclick="gotoPageWithTrans1(1)" title="About Us"><i class="navi-icons about-icon"></i>About</a>
+            <a class="small-navi team page-transition" href="#team" onclick="gotoPageWithTrans1(2)" title="Our Team"><i class="navi-icons team-icon"></i>Our Vision</a>
+            <a class="middle-navi resume" href="#" title="Resume"><i class="navi-icons resume-icon"></i>Contact list</a>
+          </div>
+          <div class="span4">
+            <a class="big-navi works page-transition" href="#works" onclick="gotoPageWithTrans1(3)" title="Our Works"><i class="navi-icons works-icon"></i>Explore</a>
+          </div>
+          <div class="span4">
+            <a class="middle-navi contacts page-transition" href="#contacts" onclick="gotoPageWithTrans1(4)" title="Contacts"><i class="navi-icons contacts-icon"></i>Who made this?</a>
+            <a class="small-navi blog page-transition" href="#blog" onclick="gotoPageWithTrans1(5)" title="Blog"><i class="navi-icons blog-icon"></i>Blog</a>
+            <a class="small-navi feedback page-transition" href="#feedback" onclick="gotoPageWithTrans1(6)" title="Feedback"><i class="navi-icons feedback-icon"></i>Feedback</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <%#= render 'twitter' %>
+
+    <div class="push"><!--//--></div><!--Ryan Fait's Sticky Footer-->
+  </div> 
+  <!--Footer-->
+  <%= render 'layouts/footer' %>
+</article>
