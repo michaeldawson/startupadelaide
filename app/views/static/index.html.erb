@@ -5,6 +5,14 @@
 	.bg-image4 { background: url(assets/bgs/4.jpg) no-repeat; }
 	.bg-image5 { background: url(assets/bgs/5.jpg) no-repeat; }
 	.bg-image6 { background: url(assets/bgs/6.jpg) no-repeat; }
+
+	<% Category.all.each do |category| %>
+
+	.<%= category.cat_class %> {
+		background: none repeat scroll 0 0 #<%= "%06x" % (rand * 0xffffff) %>;
+	}
+
+	<% end %>
 </style>
 
 <%= render 'home', :overlay_color=> "" %>

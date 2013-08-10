@@ -4,15 +4,6 @@
 
 
 
-
-<% Category.all.each do |category| %>
-
-.<%= category.cat_class %> {
-    background: none repeat scroll 0 0 #<%= "%06x" % (rand * 0xffffff) %>;
-}
-
-<% end %>
-
 .large {
 	.nodeguts {
   		display:block!important;
