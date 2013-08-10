@@ -1,0 +1,27 @@
+<article class="pt-page pt-page-4 bg-image4" id="works">
+  <div class="outer-wrapper overlay-<%= overlay_color %>">
+
+    <%= render 'layouts/header', :@header => "Explore the community" %>
+
+    <section class="row-fluid">
+
+      <section id="content">
+
+        <section id="options" class="clearfix">
+          <ul id="filters" class="option-set clearfix" data-option-key="filter">
+            <li><a href="#filter" data-option-value="*" class="selected">All</a></li>
+
+            <% @categories.each do |category| %>
+              <li><a href="#filter" data-option-value=".<%= category.cat_class %>" class="nav-pills"><%= category.name %></a></li>
+            <% end %>
+
+        </section>
+
+      <%= render 'isotope_guts' %>
+      </section>
+</div>
+<!--Footer-->
+<%= render 'layouts/footer' %>
+
+
+</article>

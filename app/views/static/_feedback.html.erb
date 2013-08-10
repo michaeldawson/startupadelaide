@@ -1,7 +1,7 @@
 
 <!--Feedback Screen-->
-<article class="pt-page pt-page-7 bg-image6" id="feedback">
-  <div class="outer-wrapper overlay-brown">
+<article class="pt-page pt-page-6 bg-image6" id="feedback">
+  <div class="outer-wrapper overlay-<%= overlay_color %>">
     <%= render 'layouts/header', :@header => "Feedback" %>
     <!--Content-->
     <section class="row-fluid">
@@ -28,9 +28,5 @@
     <div class="push"><!--//--></div><!--Ryan Fait's Sticky Footer-->
   </div>
   <!--Footer-->
-  <footer>
-    <div class="container">
-      <p>Copyright &copy; ItemBridge inc., 2013</p>
-    </div>
-  </footer>
+  <%= render 'layouts/footer' %>
 </article>

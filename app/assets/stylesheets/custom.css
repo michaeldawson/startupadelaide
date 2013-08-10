@@ -1,42 +1,12 @@
-/* Custom CSS */
 
-/*CSS Reset*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
 
-/*Global Styles*/
-html, body { 
-	height: 100%;
-	background-color: #fafafa;
-	overflow-x: hidden;
-	overflow-y: auto;
-	-webkit-overflow-scrolling:touch;
-}
 .outer-wrapper {
 	min-height: 100%;
 	height: auto !important;
 	margin: 0 auto -90px;
 }
 h1, h2, h3, h4, h5, h6 {
-	color: #FFF;
+	color: #333;
 	font-weight: 300;
 	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
@@ -49,8 +19,7 @@ h6 { font-size: 1em; }
 	color: #222222;
 }
 a, a:active, a:visited {
-	color: #0e9ec7;
-	text-decoration: none;
+
 	font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
 }
 a:hover {
@@ -113,22 +82,22 @@ a:hover {
 	filter: alpha(opacity=90);/*for ie8*/
 }
 .overlay-green1 {
-	background-color: rgba(80, 177, 160, 0.9);
+	background-color: rgba(80, 177, 160, 0.15);
 }
 .overlay-green2 {
-	background-color: rgba(80, 177, 137, 0.9);
+	background-color: rgba(80, 177, 137, 0.15);
 }
 .overlay-blue {
-	background-color: rgba(14, 158, 199, 0.9);
+	background-color: rgba(14, 158, 199, 0.15);
 }
 .overlay-pink {
-	background-color: rgba(208, 66, 117, 0.9);
+	background-color: rgba(208, 66, 117, 0.15);
 }
 .overlay-brown {
-	background-color: rgba(214, 143, 42, 0.9);
+	background-color: rgba(214, 143, 42, 0.15);
 }
 .overlay-orange {
-	background-color: rgba(208, 110, 57, 0.9);
+	background-color: rgba(208, 110, 57, 0.15);
 }
 
 /*Screens*/
@@ -340,7 +309,7 @@ a.team {
 	padding: 38px 10px 12px 10px;
 }
 a.resume {
-	background-color: #c85141;
+	background-color: #d8457a;
 	padding: 38px 10px 12px 10px;
 	margin-top: 30px;
 }
@@ -349,7 +318,7 @@ a.works {
 	padding: 95px 10px 12px 10px;
 }
 a.contacts {
-	background-color: #d8457a;
+	background-color: #c85141;
 	padding: 40px 10px 12px 10px;
 }
 a.blog {
@@ -465,7 +434,7 @@ a.feedback {
 }
 .submenu ul li {
 	font-size: 1.05em;
-	opacity: 0;
+	opacity: 0.25;
 	filter: alpha(opacity=0);/*for ie8*/
 	-webkit-transition: opacity 200ms ease-out;
 	-moz-transition: opacity 200ms ease-out;

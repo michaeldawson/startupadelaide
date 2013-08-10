@@ -3,16 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.portfolioFilter a { 
-    margin-right: 10px; 
-    color:#666;
-    text-decoration:none;
+.intro h2 {
+    margin-top:25px;
+}
 
+footer {
+    h2 {
+        color:#fff;
+    }
 }
- 
-.portfolioFilter a.current { 
-    font-weight:bold;
-}
+
  
 img {
     margin:5px;
@@ -48,4 +48,10 @@ img {
     -webkit-transition-property: -webkit-transform, opacity;
     -moz-transition-property: -moz-transform, opacity;
     transition-property: transform, opacity;
+}
+
+
+
+.team-mate a {
+    color:#333!important;
 }

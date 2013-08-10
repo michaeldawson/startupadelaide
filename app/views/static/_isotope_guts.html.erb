@@ -1,0 +1,24 @@
+<div id="container" class="clickable clearfix">
+	<% @nodes.each_with_index do |node, index| %>
+	  <div class="element <%= node.category.cat_class %>" data-symbol="<%= node.name[0,2] %>" data-category="<%= node.category.cat_class %>">
+	    <!--p class="number"><%= index %></p-->
+	    <!--h3 class="symbol"><%= node.name[0,2] %></h3-->
+	    <h2 class="name"><%= node.name %></h2>
+
+	    <div class="large_show hidden">
+	    	<h3>What is it?</h3>
+	    	<h3>Who's it for?</h3>
+	    	<h3>How to find out more?</h3>
+	    </div>
+
+	    <div class="large_show hidden social">
+	    	<%#= image_tag "map.png" %><br/>
+
+			<%= image_tag "social/facebook_32.png" %>
+			<%= image_tag "social/twitter_32.png" %>
+			<%= image_tag "social/linkedin_32.png" %>
+
+	    </div>
+	  </div>
+	<% end %>
+</div>
