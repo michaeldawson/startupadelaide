@@ -6,22 +6,21 @@
 	.bg-image5 { background: url(assets/bgs/5.jpg) no-repeat; }
 	.bg-image6 { background: url(assets/bgs/6.jpg) no-repeat; }
 
-	<% Category.all.each do |category| %>
+	<% Category.all.each_with_index do |category, index| %>
 
-	.<%= category.cat_class %> {
-		background: none repeat scroll 0 0 #<%= "%06x" % (rand * 0xffffff) %>;
-	}
+		.<%= category.cat_class %> {
+			background: none repeat scroll 0 0 <%= @pallet[index] %>;
+		}
 
 	<% end %>
 </style>
 
-<%= render 'home', :overlay_color=> "" %>
+<%= render 'home' %>
 <%= render 'about', :overlay_color=> "green1" %>
-<%= render 'creators', :overlay_color=> "orange" %>
-<%#= render 'community' %>
-<%= render 'isotope', :overlay_color=> "blue" %>
-<%= render 'contact', :overlay_color=> "pink" %>
 <%= render 'vision', :overlay_color=> "green2" %>
+<%= render 'starting', :overlay_color=> "pink" %>
+<%= render 'isotope', :overlay_color=> "blue" %>
+<%= render 'creators', :overlay_color=> "orange" %>
 <%= render 'feedback', :overlay_color=> "brown" %>
 
 <%= render 'post_scripts' %>

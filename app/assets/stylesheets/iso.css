@@ -81,12 +81,6 @@ a:hover code {
   color: #4BF; 
 }
 
-a:active,
-a:active code {
-  color: #1FB;
-  background: black;
-}
-
 a img { border: none; }
 
 em { font-style: italic; }
@@ -138,10 +132,9 @@ body {
 }
 
 .element .name {
-  left: 0.5em;
   position: relative;
   top: 0.3em;
-  font-size: 1.05em;
+  font-size: 1em;
 }
 
 
@@ -161,6 +154,10 @@ body {
 
 }
 
+.element h2 {
+  max-width: 85%;
+}
+
 
 .variable-sizes .element.width2 { width: 230px; }
 .variable-sizes .element.height2 { height: 230px; }
@@ -171,7 +168,6 @@ body {
 .element.large,
 .variable-sizes .element.large,
 .variable-sizes .element.large.width2.height2 {
-  font-size: 1.8em;
   width: 390px;
   height: 390px;
   z-index: 100;
