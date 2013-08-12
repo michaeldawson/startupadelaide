@@ -6,18 +6,26 @@ ActiveAdmin.register Node do
 			f.input :what, label: "What is it?"
 			f.input :who_for, label: "Who's it for?"
 			f.input :more, label: "How can we find out more?"
-			
+		
+		end
 
-			
+		f.inputs "Social Links" do
 			f.has_many :social_links do |ff|
-
+				ff.input :social_key
+				ff.input :link_url
 			end
-			#	fu.input :social_key, as: :select, collection: Category.all
-				
-			#	fu.input :_destroy, :as=>:boolean, :required => false, :label => 'Delete Tag' unless fu.object.new_record?
-			
 		end
 
 		f.actions
+	end
+
+	controller do
+		def new
+	  		@node = Node.new
+
+	  		SocialLinkPrefill.all.each do |link|
+	  			@node.social_links << SocialLink.new(:social_key=>link.name)
+	  		end
+	  	end
 	end
 end

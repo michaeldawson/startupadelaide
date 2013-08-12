@@ -140,7 +140,7 @@ body {
 
 .element .social {
   position:absolute;
-  bottom: 0;
+  bottom: 1em;
   margin-left:15px;
   color:#fff;
 }
@@ -157,6 +157,10 @@ body {
 
 .element h2 {
   max-width: 85%;
+}
+
+.element p {
+  font-size: 0.9em;
 }
 
 

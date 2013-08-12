@@ -34,3 +34,20 @@ category = FactoryGirl.create(:category, :name=>'Investors', :cat_class=>'invest
 	['Acumen VC Fund', 'ASSOB', 'BioAngels', 'Blue Sky Private Equity', 'SA Angels', 'Terra Rosa Capital'].each do |n|
 	FactoryGirl.create(:node, :name=>n, :category => category)
 end
+
+['facebook', 'twitter', 'website'].each do |sl|
+	SocialLinkPrefill.create(:name=>sl)
+end
+
+Node.all.each do |n|
+	SocialLinkPrefill.all.each do |sl|
+		n.social_links << SocialLink.create(:social_key=>sl.name, :link_url=>"http://#{sl.name}.com")
+	end
+end
+
+Node.all.each do |n|
+	n.what = "This program is a..."
+	n.who_for = "This program is designed for..."
+	n.more = "To find out more, go to..."
+	n.save
+end

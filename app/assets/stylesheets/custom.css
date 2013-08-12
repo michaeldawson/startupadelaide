@@ -1,4 +1,8 @@
 
+.icon-website:before {
+  content: "\f045";
+}
+
 
 .outer-wrapper {
 	min-height: 100%;

@@ -9,7 +9,7 @@
 	<% Category.all.each_with_index do |category, index| %>
 
 		.<%= category.cat_class %> {
-			background: none repeat scroll 0 0 <%= @pallet[index] %>;
+			background: none repeat scroll 0 0 <%= @palette[index] %>;
 		}
 
 	<% end %>
