@@ -121,6 +121,12 @@ jQuery(window).load(function(){
         Grid.init();
 
 
+        // stop the click propagating to the isotope handlers
+        $('.social a').click(function(event){
+          event.stopPropagation();
+        });
+
+
         //Ajax Form
         $('#submit').click(function(){
           sprytextfield1.validate();

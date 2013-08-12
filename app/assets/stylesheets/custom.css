@@ -54,20 +54,7 @@ a:hover {
 .orange-bg {
 	background-color: #d06e39;
 }
-.green1-bg a, .green1-bg a:active, .green1-bg a:visited,
-.green2-bg a, .green2-bg a:active, .green2-bg a:visited,
-.blue-bg a, .blue-bg a:active, .blue-bg a:visited,
-.pink-bg a, .pink-bg a:active, .pink-bg a:visited,
-.brown-bg a, .brown-bg a:active, .brown-bg a:visited,
-.orange-bg a, .orange-bg a:active, .orange-bg a:visited,
-.overlay-green1 a, .overlay-green1 a:active, .overlay-green1 a:visited,
-.overlay-green2 a, .overlay-green2 a:active, .overlay-green2 a:visited,
-.overlay-blue a, .overlay-blue a:active, .overlay-blue a:visited,
-.overlay-pink a, .overlay-pink a:active, .overlay-pink a:visited,
-.overlay-brown a, .overlay-brown a:active, .overlay-brown a:visited,
-.overlay-orange a, .overlay-orange a:active, .overlay-orange a:visited {
-	color: #fff;
-}
+
 .green1-bg a:hover, .green2-bg a:hover, .blue-bg a:hover,
 .pink-bg a:hover, .brown-bg a:hover, .orange-bg a:hover,
 .overlay-green1 a:hover, .overlay-green2 a:hover,

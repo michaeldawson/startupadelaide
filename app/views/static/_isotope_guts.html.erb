@@ -1,25 +1,29 @@
-<div id="container" class="clickable clearfix">
-	<% @nodes.each_with_index do |node, index| %>
-	  <div class="element <%= node.category.cat_class %>" data-symbol="<%= node.name[0,2] %>" data-category="<%= node.category.cat_class %>">
-	    <!--p class="number"><%= index %></p-->
-	    <!--h3 class="symbol"><%= node.name[0,2] %></h3-->
-	    <h2 class="name"><%= node.name %></h2>
 
-	    <div class="large_show hidden">
-	    <br/>
-	    	<h3>What?</h3><br/>
-	    	<h3>Who for?</h3><br/>
-	    	<h3>Finding out more</h3>
-	    </div>
+<% @nodes.each_with_index do |node, index| %>
+  <div class="element <%= node.category.cat_class %>" data-symbol="<%= node.name[0,2] %>" data-category="<%= node.category.cat_class %>">
+    <!--p class="number"><%= index %></p-->
+    <!--h3 class="symbol"><%= node.name[0,2] %></h3-->
+    <h2 class="name"><%= node.name %></h2>
 
-	    <div class="large_show hidden social">
-	    	<%#= image_tag "map.png" %>
+    <div class="large_show hidden">
+    <br/>
+    	<h3>What?</h3><br/>
+    	<h3>Who for?</h3><br/>
+    	<h3>Finding out more</h3>
+    </div>
 
-			<%= image_tag "social/facebook_32.png" %>
-			<%= image_tag "social/twitter_32.png" %>
-			<%= image_tag "social/linkedin_32.png" %>
+    <div class="large_show hidden social">
+    	<%= link_to "http://google.com", target: "_blank" do %>
+    		<i class="icon-share icon-2x"></i>
+    	<% end %>
 
-	    </div>
-	  </div>
-	<% end %>
-</div>
+		<%= link_to "http://facebook.com", target: "_blank" do %>
+			<i class="icon-facebook icon-2x"></i>
+		<% end %>
+
+		<%= link_to "http://twitter.com", target: "_blank" do %>
+			<i class="icon-twitter icon-2x"></i>
+		<% end %>
+    </div>
+  </div>
+<% end %>
