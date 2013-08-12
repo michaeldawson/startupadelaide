@@ -10,7 +10,7 @@ Map::Application.routes.draw do
   resources :nodes
   resources :categories
 
-
+  match '/post' => 'static#post'
 
 
   # The priority is based upon order of creation:

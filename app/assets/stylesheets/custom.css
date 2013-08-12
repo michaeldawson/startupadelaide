@@ -38,7 +38,7 @@ a:hover {
 
 /*Backgrounds*/
 .white-bg {
-	background-color: #fafafa;
+	background-color: #fafafa!important;
 }
 .green1-bg {
 	background-color: #50b1a0;

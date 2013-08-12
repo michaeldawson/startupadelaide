@@ -87,6 +87,7 @@ jQuery(window).load(function(){
         // change size of clicked element
         $container.delegate( '.element', 'click', function(){
             $(this).toggleClass('large');
+            $(this).toggleClass('white-bg', 1000);
             $(this).find(".large_show").toggleClass('hidden')
             
             $container.isotope('reLayout');
@@ -132,7 +133,7 @@ jQuery(window).load(function(){
           sprytextfield1.validate();
           sprytextfield2.validate();
           sprytextarea1.validate();
-          $.post("form.php", $("#feedback-form").serialize(),  function(data) {
+          $.post("/form", $("#feedback-form").serialize(),  function(data) {
             $('#success').html(data).animate({opacity: 1}, 500, function(){
               $("#feedback-form").trigger( 'reset' );
             });

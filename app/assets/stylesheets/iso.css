@@ -194,6 +194,10 @@ body {
   ;
 }
 
+.clickable .element.large:hover h2 {
+  color: #333;
+}
+
 /**** Example Options ****/
 
 #options {

@@ -19,6 +19,14 @@ ActiveAdmin.register Node do
 		f.actions
 	end
 
+	index do 
+		column :name
+		column :category
+		column :what
+		column :who_for
+		column :more
+	end
+
 	controller do
 		def new
 	  		@node = Node.new
