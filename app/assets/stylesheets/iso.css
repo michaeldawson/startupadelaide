@@ -52,6 +52,9 @@
 
 /* End: Recommended Isotope styles */
 
+.isotope-container {
+  margin:0 25px;
+}
 
 
 /* disable CSS transitions for containers with infinite scrolling*/
@@ -214,7 +217,6 @@ body {
 }
 
 #options ul {
-  margin: 0;
   list-style: none;
 }
 

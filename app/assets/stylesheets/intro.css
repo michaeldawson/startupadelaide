@@ -24,6 +24,7 @@ time, mark, audio, video {
 html, body { 
 	height: 100%;
 	background-color: #fafafa;
+	hyphens: auto;
 }
 body {
 	font-family: 'Open Sans', Arial, Helvetica, sans-serif;	

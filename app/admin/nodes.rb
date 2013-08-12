@@ -25,6 +25,7 @@ ActiveAdmin.register Node do
 		column :what
 		column :who_for
 		column :more
+		default_actions
 	end
 
 	controller do
