@@ -170,7 +170,7 @@ body {
 .variable-sizes .element.large,
 .variable-sizes .element.large.width2.height2 {
   width: 390px;
-  height: 390px;
+  height: 380px;
   z-index: 100;
 }
 

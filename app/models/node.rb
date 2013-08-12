@@ -5,4 +5,5 @@ class Node < ActiveRecord::Base
   has_many :social_links
 
   accepts_nested_attributes_for :social_links
+  
 end
