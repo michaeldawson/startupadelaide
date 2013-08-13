@@ -7,11 +7,9 @@
 	.bg-image6 { background: url(assets/bgs/6.jpg) no-repeat; }
 
 	<% Category.all.each_with_index do |category, index| %>
-
 		.<%= category.cat_class %> {
 			background: none repeat scroll 0 0 <%= @palette[index] %>;
 		}
-
 	<% end %>
 </style>
 
@@ -22,5 +20,4 @@
 <%= render 'isotope', :overlay_color=> "blue" %>
 <%= render 'creators', :overlay_color=> "orange" %>
 <%= render 'feedback', :overlay_color=> "brown" %>
-
 <%= render 'post_scripts' %>

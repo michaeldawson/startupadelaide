@@ -201,10 +201,14 @@ body {
   color: #333;
 }
 
-/**** Example Options ****/
+
+#filters {
+  display:inline-block;
+}
 
 #options {
   padding-bottom: 1.0em;
+  text-align: center;
 }
 
 #options h3 {
