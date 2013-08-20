@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(:version => 20130818072123) do
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
     t.string   "sponsor"
+    t.string   "description"
     t.string   "owner"
     t.string   "phone"
     t.string   "champion"

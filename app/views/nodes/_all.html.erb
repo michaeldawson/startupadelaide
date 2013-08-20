@@ -1,17 +1,17 @@
 <% @nodes.each_with_index do |node, index| %>
-  <div class="element <%= node.category.cat_class %>" data-symbol="<%= node.name[0,2] %>" data-category="<%= node.category.cat_class %>">
+  <div class="element <%= node.category.cat_class if node.category %>" data-symbol="" data-category="<%= node.category.cat_class if node.category %>">
     <!--p class="number"><%= index %></p-->
-    <!--h3 class="symbol"><%= node.name[0,2] %></h3-->
+    
     <h2 class="name"><%= node.name %></h2>
 
     <div class="large_show hidden">
     <br/>
     	<h4>What?</h4>
-            <p><%= node.what %></p><br/>
+            <p><%= node.description %></p><br/>
     	<h4>Who for?</h4>
-            <p><%= node.who_for %></p><br/>
+            <p><%#= node.who_for %></p><br/>
     	<h4>Finding out more</h4>
-            <p><%= node.more %></p>
+            <p><%#= node.more %></p>
     </div>
 
     <div class="large_show hidden social">

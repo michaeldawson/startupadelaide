@@ -1,0 +1,10 @@
+<H2>Import nodes</H2>
+
+Results may be inconsistent.
+
+<%= form_tag admin_import_nodes_path, multipart: true do %>
+	<%= file_field_tag :file %>
+	<%= submit_tag "Import" %>
+<% end %>
+
+<br/>
