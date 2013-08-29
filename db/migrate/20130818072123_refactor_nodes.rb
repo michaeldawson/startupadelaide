@@ -6,7 +6,7 @@ class RefactorNodes < ActiveRecord::Migration
 	remove_column :nodes, :more
 
 	add_column :nodes, :sponsor, :string
-	add_column :nodes, :description, :string
+	add_column :nodes, :description, :text
 	add_column :nodes, :owner, :string
 	add_column :nodes, :phone, :string
 	add_column :nodes, :champion, :string
