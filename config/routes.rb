@@ -8,7 +8,7 @@ Map::Application.routes.draw do
 
   resources :categories
 
-  match '/post' => 'static#post'
+  post '/post' => 'static#post'
 
   namespace :admin do
     post 'upload' => 'nodes#upload', as: :import_nodes

@@ -239,7 +239,6 @@ a.small-navi, a.middle-navi,
 a.big-navi {
 	display: block;
 	float: left;
-	color: #fff;
 	text-decoration: none;
 	overflow: hidden;
 	-webkit-box-sizing: border-box;
@@ -320,7 +319,6 @@ a.blog {
 a.feedback {
 	background-color: #d9912a;
 	padding: 52px 10px 12px 10px;
-	margin-top: 30px;
 }
 .about-icon {
 	width: 48px;
@@ -416,6 +414,7 @@ a.feedback {
 	float: left;
 	height: auto;
 	min-width: 200px;
+	top: -15px;
 }
 .submenu ul {
 	display: block;
@@ -460,21 +459,7 @@ a.feedback {
 	opacity: 50;
 	filter: alpha(opacity=50);/*for ie8*/
 }
-.page2-submenu {
-	top: 42px;
-}
-.page3-submenu {
-	top: 15px;
-}
-.page4-submenu {
-	top: -10px;
-}
-.page5-submenu {
-	top: -33px;
-}
-.page6-submenu {
-	top: -35px;
-}
+
 
 /*Content*/
 .container {
@@ -497,11 +482,6 @@ a.feedback {
 	font-size: 0.9em;
 	color: #fff;
 	line-height: 1.7;
-}
-.container > .span12 a:hover,
-.container > .span6 a:hover,
-.container > .span4 a:hover {
-	text-decoration: underline;
 }
 .quotation {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
@@ -1186,28 +1166,7 @@ textarea.textareaHintState, .textareaHintState textarea {
 	.team-mate {
 		max-height: 230px;
 	}
-	.submenu {
-		width: 100% !important;
-	}
-	.page2-submenu, .page3-submenu,
-	.page4-submenu, .page5-submenu,
-	.page6-submenu, .page7-submenu {
-		top: 15px;
-	}
-	.submenu ul li {
-		opacity: 1;
-		filter: alpha(opacity=0);/*for ie8*/
-		display: inline-block;
-		margin: 0 15px 6px 6px;
-		font-size: 1.05em;
-	}
-	.submenu ul li.inline {
-		font-size: 1.05em;
-	}
-	.submenu ul li.current {
-		display: inline-block;
-		text-decoration: underline;
-	}
+	
 	.timeline {
 		margin-left: 49.4%;
 	}
@@ -1224,7 +1183,6 @@ textarea.textareaHintState, .textareaHintState textarea {
 		left: -15px;
 		background-position: -15px 0px;
 	}
-
 }
 
 @media (max-height: 768px) {
@@ -1235,6 +1193,27 @@ textarea.textareaHintState, .textareaHintState textarea {
 
 /*Tablet Portrait*/
 @media (max-width: 767px) {
+	.submenu {
+		width: 100% !important;
+		text-align:center;
+	}
+	.submenu ul {
+		margin:0 auto;
+		position: relative;
+	}
+	.submenu ul li {
+		opacity: 1;
+		filter: alpha(opacity=0);/*for ie8*/
+		display: inline-block;
+		margin: 0 4px 4px 4px;
+		font-size: 1em;
+	}
+	.submenu ul li.current {
+		display: inline-block;
+		text-decoration: underline;
+	}
+
+
 	h2 {
 		padding: 0 10px;
 	}
@@ -1263,16 +1242,12 @@ textarea.textareaHintState, .textareaHintState textarea {
 		float: left;
 		width: 49.6%;
 	}
-	a.resume, a.contacts, 
-	a.works, a.blog, a.feedback {
-		margin-top: 3px;
-	}
+
 	a.about, a.blog {
 		margin-right: 0.8%;
 	}
 	.page-navi, .page-navi.single {
 		position: absolute;
-		top: -80px;
 		left: 10px;
 	}
 	.submenu {

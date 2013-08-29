@@ -1,22 +1,16 @@
 <header class="row-fluid">
   <div class="container">
-    <div class="span9 relative">
+    <div class="span1 relative">
     	<div class="page-navi">
       	<a class="home-page page-transition" href="#home" onclick="gotoPageWithTrans2(0)" title="Go Home"></a>
       </div>
-      <h1><%= @header %></h1>
-      
+    </div>
+
+    <div class="span8">
+      <h1><%= @header %></h1> 
     </div>
     <div class="span3">
-      <nav class="submenu page6-submenu">
-        <ul>
-          <li><a href="#about" class="page-transition" onclick="gotoPageWithTrans5(1)">About</a></li>
-          <li><a href="#vision" class="page-transition" onclick="gotoPageWithTrans5(2)">Our Vision</a></li>
-          <li><a href="#explore" class="page-transition" onclick="gotoPageWithTrans5(3)">Explore</a></li>
-          <li><a href="#creators" class="page-transition" onclick="gotoPageWithTrans4(5)">Creators</a></li>
-          <li><a href="#feedback" class="page-transition" onclick="gotoPageWithTrans5(6)">Feedback</a></li>
-        </ul>
-      </nav>
+      <%= render 'layouts/nav' %>
     </div>
   </div>
 </header>
