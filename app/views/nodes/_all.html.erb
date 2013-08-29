@@ -4,14 +4,8 @@
     
     <h2 class="name"><%= node.name %></h2>
 
-    <div class="large_show hidden">
-    <br/>
-    	<h4>What?</h4>
-            <p><%= node.description %></p><br/>
-    	<h4>Who for?</h4>
-            <p><%#= node.who_for %></p><br/>
-    	<h4>Finding out more</h4>
-            <p><%#= node.more %></p>
+    <div class="large_show hidden description">
+        <%= node.description %>
     </div>
 
     <div class="large_show hidden social">

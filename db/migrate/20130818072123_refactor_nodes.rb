@@ -10,7 +10,6 @@ class RefactorNodes < ActiveRecord::Migration
 	add_column :nodes, :owner, :string
 	add_column :nodes, :phone, :string
 	add_column :nodes, :champion, :string
-	add_column :nodes, :champion_contact, :text
-
+	add_column :nodes, :champion_contact, :string
   end
 end

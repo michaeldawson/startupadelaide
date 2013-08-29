@@ -388,7 +388,6 @@ a.feedback {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	margin: 30px 0 10px 0;
 }
 .tw-feed p {
 	margin-bottom: 10px;
@@ -489,7 +488,7 @@ a.feedback {
 	color: #fff;
 	line-height: 2;
 }
-.container > .span6 p {
+.container > .span6 {
 	font-size: 0.8em;
 	color: #fff;
 	line-height: 1.7;
@@ -1250,17 +1249,13 @@ textarea.textareaHintState, .textareaHintState textarea {
 		font-size: 3em;
 		display: block;
 	}
-	.logo > h1 {
-		margin-top: -35px;
-		margin-bottom: 40px;
-	}
+
 	ul.social-bar-black, ul.social-bar-white {
 		position: absolute;
 		top: -10px;
 		right: 10px;
 	}
 	.navi {
-		margin-top: -90px;
 		padding-left: 0.7%;
 		padding-right: 0.7%;
 	}

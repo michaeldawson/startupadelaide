@@ -3,7 +3,8 @@ ActiveAdmin.register Node do
 		f.inputs do
 			f.input :name
 			f.input :category, as: :select, collection: Category.all
-			#f.input :what, label: "What is it?"
+			f.input :description, as: :text
+
 			#f.input :who_for, label: "Who's it for?"
 			#f.input :more, label: "How can we find out more?"
 		
@@ -11,7 +12,7 @@ ActiveAdmin.register Node do
 
 		f.inputs "Social Links" do
 			f.has_many :social_links do |ff|
-				ff.input :social_key
+				ff.input :social_key, as: :select, collection: SocialLinkPrefill.all.map {|slp| slp.name}
 				ff.input :link_url
 			end
 		end

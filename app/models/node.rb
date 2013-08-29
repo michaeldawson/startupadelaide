@@ -19,9 +19,9 @@ class Node < ActiveRecord::Base
 			#end
 
 			n.category = Category.find_or_create_by_name(row['prime_category'])
-			n.save
+			n.social_links << SocialLink.create(:social_key=>"website", :link_url=>row['URL']) if !row['URL'].blank?
 
-			puts n.category.name
+			n.save
 			#puts (row.to_hash & Node.new.attributes)
 		end
 	end

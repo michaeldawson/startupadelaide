@@ -145,7 +145,7 @@ body {
 
 .element .social {
   position:absolute;
-  bottom: 1em;
+  bottom: 10px;
   margin-left:15px;
   color:#fff;
 }

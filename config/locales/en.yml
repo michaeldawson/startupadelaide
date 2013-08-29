@@ -5,5 +5,5 @@ en:
   hello: "Hello world"
   active_admin:
     dashboard_welcome:
-      welcome: "Welcome to the Startup Adelaide website dashboard! If you have any questions, contact Michael Dawson in the Majoran Distillery: 0435129029 / m.dawson@y7mail.com"
-      cta: "Add categories or nodes using the links above."
+      welcome: "Welcome to the Startup Adelaide website dashboard! If you have any questions, contact Michael Dawson in the Majoran Distillery"
+      call_to_action: "0435129029 || michael@brandycontent.com"
