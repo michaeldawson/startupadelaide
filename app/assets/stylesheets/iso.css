@@ -239,9 +239,8 @@ body {
   display: block;
   padding: 0.4em 0.5em;
   /* background-color: #DDD; */
-  color: #222;
+  color: #fff;
   font-weight: bold;
-  text-shadow: 0 1px hsla( 0, 0%, 100%, 0.5 );
   /* background-image: -webkit-linear-gradient( top, hsla( 0, 0%, 100%, 0.5 ), hsla( 0, 0%, 100%, 0.0 ) );
   background-image:    -moz-linear-gradient( top, hsla( 0, 0%, 100%, 0.5 ), hsla( 0, 0%, 100%, 0.0 ) );
   background-image:     -ms-linear-gradient( top, hsla( 0, 0%, 100%, 0.5 ), hsla( 0, 0%, 100%, 0.0 ) );

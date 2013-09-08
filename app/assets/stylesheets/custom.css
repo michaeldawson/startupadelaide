@@ -91,6 +91,10 @@ a:hover {
 	background-color: rgba(208, 110, 57, 0.15);
 }
 
+.overlay-white {
+	background-color: rgba(100, 100, 100, 0.35);
+}
+
 /*Screens*/
 /*Header*/
 header {
@@ -104,6 +108,11 @@ header h1 {
 	margin-right: 30px;
 	margin-left: -3px;
 }
+
+#explore h1 {
+	color: #fff;
+}
+
 .page-navi {
 	float: left;
 	margin-top: 35px;
@@ -466,7 +475,7 @@ a.feedback {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 .container > .span12 {
-	margin-bottom: 80px;
+	margin-bottom: 30px;
 }
 .container > .span12 p {
 	font-size: 1.1em;
