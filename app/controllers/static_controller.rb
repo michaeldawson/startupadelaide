@@ -6,6 +6,6 @@ class StaticController < ApplicationController
   end
 
   def post
-  	puts params.inspect
+
   end
 end

@@ -13,3 +13,27 @@
 # ActiveSupport::Inflector.inflections do |inflect|
 #   inflect.acronym 'RESTful'
 # end
+
+
+module ActiveSupport::Inflector
+  # does the opposite of humanize.... mostly. Basically does a
+  # space-substituting .underscore
+  def linked(the_string)
+    linked = text.gsub( %r{http://[^\s<]+} ) do |url|
+		"<a href='#{url}'>#{url}</a>"
+	end
+
+	linked = text.gsub( %r{@[^\s<]+} ) do |url|
+		link = url
+		link[0]=''
+		"<a href='http://twitter.com/#{link}'>#{url}</a>"
+	end
+
+	linked
+  end
+end
+class String
+  def linked
+    ActiveSupport::Inflector.linked(self)
+  end
+end
