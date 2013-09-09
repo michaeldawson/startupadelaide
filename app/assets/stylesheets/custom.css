@@ -312,13 +312,14 @@ a.resume {
 	padding: 38px 10px 12px 10px;
 	margin-top: 30px;
 }
-a.works {
+a.twitter {
 	background-color: #0fa2cb;
-	padding: 95px 10px 12px 10px;
+	padding: 25px 10px 12px 10px;
+	font-size: 18px;
 }
 a.contacts {
 	background-color: #c85141;
-	padding: 40px 10px 12px 10px;
+	padding: 95px 10px 12px 10px;
 }
 a.blog {
 	background-color: #d8733b;

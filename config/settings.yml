@@ -1,0 +1,19 @@
+defaults: &defaults
+  site_name: Startup Adelaide
+  legal_name: Startup Adelaide Pty Ltd
+  contact_email: 
+  admin_email: 
+  support_phone: 
+  business_address: Majoran Distillery, Lvl 2, 14 Grenfell St, Adelaide, SA, 5000
+  website: startupadelaide.com.au
+  facebook_url: 
+  twitter_url: https://twitter.com/StartupADL
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

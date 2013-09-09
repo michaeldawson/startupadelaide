@@ -6,7 +6,9 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'activeadmin'
-gem 'factory_girl'
+gem 'factory_girl_rails'
+gem 'twitter'
+gem 'settingslogic'
 
 group :development do
 	gem 'sqlite3'
@@ -27,8 +29,6 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-
-gem 'factory_girl_rails'
 
 
 group :development, :test do

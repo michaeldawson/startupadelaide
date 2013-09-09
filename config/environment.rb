@@ -10,3 +10,8 @@ class Hash
 		reject { |k, v| !(other.include?(k)) }
 	end
 end
+
+class Settings < Settingslogic
+  source "#{Rails.root}/config/settings.yml"
+  namespace Rails.env
+end

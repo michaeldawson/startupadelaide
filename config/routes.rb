@@ -1,6 +1,9 @@
 Map::Application.routes.draw do
 
-  get "static/index" => 'static#index'
+  get "ajax/tweets"
+  get "ajax/mentions"
+
+  get "static/index"
 
   root :to => 'static#index'
   devise_for :admin_users, ActiveAdmin::Devise.config
