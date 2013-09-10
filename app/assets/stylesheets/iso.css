@@ -107,7 +107,7 @@ body {
 .element {
   width: 120px;
   height: 120px;
-  margin: 5px;
+  margin: 10px;
   float: left;
   overflow: hidden;
   position: relative;
@@ -178,7 +178,7 @@ body {
 .element.large,
 .variable-sizes .element.large,
 .variable-sizes .element.large.width2.height2 {
-  width: 390px;
+  width: 470px;
   height: 380px;
   z-index: 100;
 }

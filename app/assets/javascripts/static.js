@@ -19,7 +19,7 @@ jQuery(window).load(function(){
         $container.isotope({
           itemSelector : '.element',
           masonry : {
-            columnWidth : 60
+            columnWidth : 20
           },
           masonryHorizontal : {
             rowHeight: 60
