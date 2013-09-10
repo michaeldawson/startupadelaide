@@ -1,11 +1,13 @@
 class AjaxController < ApplicationController
   def tweets
-  	@tweets = Tweet.where(user_screen_name: "Startupaus")
-  	render json: linked(@tweets.to_json)
+  	puts "received call"
+  	@tweets = Tweet.where(user_screen_name: "StartupADL")
+  	render json: (@tweets.to_json)
+  	puts "rendering #{@tweets.count}"
   end
 
   def mentions
-  	@tweets = Tweet.where('user_screen_name != ?', 'StartupAus')
-  	render json: linked(@tweets.to_json)
+  	@tweets = Tweet.where('user_screen_name != ?', 'StartupADL')
+  	render json: (@tweets.to_json)
   end
 end
