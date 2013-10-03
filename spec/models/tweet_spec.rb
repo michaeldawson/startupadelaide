@@ -12,7 +12,7 @@ describe Tweet do
 		it "returns links for twitter ids" do
 			text = "this a sentence with a twitter id @startupaus"
 			tweet = FactoryGirl.create(:tweet, text: text)
-			tweet.text.should == "this a sentence with a twitter id <a href='http://twitter.com/startupaus target='_blank'>@startupaus</a>"
+			tweet.text.should == "this a sentence with a twitter id <a href='http://twitter.com/startupaus' target='_blank'>@startupaus</a>"
 		end
 	end
 end

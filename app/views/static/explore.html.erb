@@ -1,0 +1,47 @@
+<style>
+  <% Category.all.each_with_index do |category, index| %>
+    .<%= category.cat_class %> {
+      background: none repeat scroll 0 0 <%= @palette[index] %>;
+    }
+  <% end %>
+</style>
+
+<article class="pt-page pt-page-4 bg-image4" id="explore">
+  <div class="outer-wrapper overlay-<%= @overlay_color %>">
+
+    <%= render 'layouts/header', :@header => "Explore the community" %>
+
+    <section class="row-fluid">
+
+        <section id="options" class="clearfix">
+          <ul id="filters" class="option-set clearfix" data-option-key="filter" data-filter-group="category">
+            <li><a href="#filter-category-all" data-option-value="*" class="selected">All</a></li>
+
+            <% @categories.each do |category| %>
+              <li><a href="#filter-category-<%= category.cat_class %>" data-option-value=".<%= category.cat_class %>" class="<%= category.cat_class %> nav-pills"><%= category.name %></a></li>
+            <% end %>
+          </ul>
+
+          <ul id="filters2" class="option-set clearfix" data-option-key="filter" data-filter-group="target">
+            <li><a href="#filter-category-all" data-option-value="*" class="selected">All</a></li>
+
+            <% @targets.each do |target| %>
+              <li><a href="#filter-target-<%= target.cat_class %>" data-option-value=".<%= target.cat_class %>" class="<%= target.cat_class %> nav-pills"><%= target.name %></a></li>
+            <% end %>
+          </ul>
+        </section>
+
+        <div id="container" class="clickable clearfix isotope-container">
+          <%= render 'nodes/all' %>
+        </div>
+
+    </section>
+      
+    <div class="push"><!--//--></div><!--Ryan Fait's Sticky Footer-->
+  </div>
+<!--Footer-->
+<%= render 'layouts/footer' %>
+
+</article>
+<%= javascript_include_tag "isotope" %>
+<%= render 'post_scripts' %>

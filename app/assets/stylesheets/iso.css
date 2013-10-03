@@ -264,6 +264,8 @@ body {
 #options li a {
   /* border-left:  1px solid hsla( 0, 0%, 100%, 0.3 );
   border-right: 1px solid hsla( 0, 0%,   0%, 0.2 ); */
+/*  border-radius: 10px;*/
+  margin-left:2px;
 }
 
 #options li:first-child a {
@@ -271,9 +273,6 @@ body {
   border-left: none; */
 }
 
-#options li:last-child a {
-  border-radius: 0 7px 7px 0;
-}
 
 #options li a.selected {
   /*  background-color: #222; */

@@ -9,11 +9,4 @@ describe StaticController do
     end
   end
 
-  describe "POST 'post'" do
-    it "returns http success" do
-      get 'post'
-      response.should be_success
-    end
-  end
-
 end

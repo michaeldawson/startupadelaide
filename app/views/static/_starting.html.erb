@@ -1,27 +1,24 @@
 
   <article class="pt-page pt-page-5 bg-image4" id="contacts">
-    <div class="outer-wrapper overlay-<%= overlay_color %>">
+    <div class="outer-wrapper overlay-<%= @overlay_color %>">
       <!--Header-->
-      <%= render 'layouts/header', :@header => "Where to start" %>
+      <%= render 'layouts/header', :@header => "Search" %>
       <!--Content-->
       <section class="row-fluid">
-        <div class="container">
-          <div class="span4 addspace">
-            <h2>Just getting started?</h2>
-            <p>Something something</p>
-          </div>
-          <div class="span4 addspace">
-            <h2>Something else?</h2>
-            <p>Take our survey. You'll be glad you did!</p>
-          </div>
-          <div class="span4 addspace">
-            <h2>Still not satisfied?</h2>
-            <p>Nothing we can do for you!</p>
-          </div>
-        </div>
+        
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>    
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular-resource.js"></script>
+        <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
+
+        
+        <script src="assets/elastic.min.js"></script>
+        <script src="assets/elastic-angular-client.min.js"></script>    
+        <script src="assets/controllers.js"></script>
+        <script src="assets/services.js"></script>
+
+
       </section>
-      <div class="push"><!--//--></div><!--Ryan Fait's Sticky Footer-->
     </div>
-    <!--Footer-->
-    <%= render 'layouts/footer' %>
+
+  <%= render 'layouts/footer' %>
   </article>

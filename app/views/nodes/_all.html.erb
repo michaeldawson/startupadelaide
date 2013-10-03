@@ -1,5 +1,5 @@
 <% @nodes.each_with_index do |node, index| %>
-  <div class="element <%= node.category.cat_class if node.category %>" data-symbol="" data-category="<%= node.category.cat_class if node.category %>">
+  <div class="element <%= node.classes %>" data-symbol="" data-category="<%= node.classes %>">
     <!--p class="number"><%= index %></p-->
     
     <h2 class="name"><%= node.name %></h2>

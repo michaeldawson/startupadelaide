@@ -5,6 +5,7 @@ class Node < ActiveRecord::Base
   attr_accessible :sponsor, :description, :owner, :phone, :champion, :champion_contact
 
   belongs_to :category
+  has_and_belongs_to_many :targets
   has_many :social_links
 
   accepts_nested_attributes_for :social_links
@@ -24,5 +25,9 @@ class Node < ActiveRecord::Base
 			n.save
 			#puts (row.to_hash & Node.new.attributes)
 		end
+	end
+
+	def classes 
+		 "#{self.category.cat_class if self.category} #{self.targets.map{|t| t.cat_class }.join(' ')}"
 	end
 end
