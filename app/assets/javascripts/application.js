@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require modernizr
-//= require jquery.flexslider
+//= require_tree ./lib
+//= require ./app/setup 
+//= require ./app/static

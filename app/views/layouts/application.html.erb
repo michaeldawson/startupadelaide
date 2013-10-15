@@ -19,7 +19,7 @@
 
 	</head>
 
-	<body <%= yield(:body_data) %>>
+	<body <%= yield(:body_data) %> data-controller="<%= controller_name %>" data-action="<%= action_name %>">
 
 		<div id="pt-main" class="pt-perspective">
 			<%= yield %>
