@@ -78,6 +78,8 @@ ActiveAdmin.setup do |config|
   # will call the method to return the path.
   #
   # Default:
+
+  
   config.logout_link_path = :destroy_admin_user_session_path
 
   # This setting changes the http method used when rendering the
@@ -116,7 +118,7 @@ ActiveAdmin.setup do |config|
   # Enable and disable Batch Actions
   #
   config.batch_actions = true
-
+  config.show_comments_in_menu = false
 
   # == Controller Filters
   #

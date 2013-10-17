@@ -10,8 +10,11 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+//= require turbolinks
 //= require jquery
 //= require jquery_ujs
+//= require elastic-min
 //= require_tree ./lib
 //= require ./app/setup 
 //= require ./app/static
+//= require transitions

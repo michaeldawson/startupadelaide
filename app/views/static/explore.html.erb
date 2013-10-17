@@ -15,18 +15,20 @@
 
         <section id="options" class="clearfix">
           <ul id="filters" class="option-set clearfix" data-option-key="filter" data-filter-group="category">
-            <li><a href="#filter-category-all" data-option-value="*" class="selected">All</a></li>
+            <li><a href="#filter-category-all" data-filter-value="" class="selected">All</a></li>
 
             <% @categories.each do |category| %>
-              <li><a href="#filter-category-<%= category.cat_class %>" data-option-value=".<%= category.cat_class %>" class="<%= category.cat_class %> nav-pills"><%= category.name %></a></li>
+              <li><a href="#filter-category-<%= category.cat_class %>" data-filter-value=".<%= category.cat_class %>" class="<%= category.cat_class %> nav-pills"><%= category.name %></a></li>
             <% end %>
           </ul>
 
+
           <ul id="filters2" class="option-set clearfix" data-option-key="filter" data-filter-group="target">
-            <li><a href="#filter-category-all" data-option-value="*" class="selected">All</a></li>
+            <li><span>Intended For</span></li>
+            <li><a href="#filter-category-all" data-option-value="*" class="selected">Everyone</a></li>
 
             <% @targets.each do |target| %>
-              <li><a href="#filter-target-<%= target.cat_class %>" data-option-value=".<%= target.cat_class %>" class="<%= target.cat_class %> nav-pills"><%= target.name %></a></li>
+              <li><a href="#filter-target-<%= target.cat_class %>" data-filter-value=".<%= target.cat_class %>" class="<%= target.cat_class %> nav-pills"><%= target.name %></a></li>
             <% end %>
           </ul>
         </section>
@@ -43,5 +45,3 @@
 <%= render 'layouts/footer' %>
 
 </article>
-<%= javascript_include_tag "isotope" %>
-<%= render 'post_scripts' %>

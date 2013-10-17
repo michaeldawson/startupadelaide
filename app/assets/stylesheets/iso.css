@@ -204,7 +204,7 @@ body {
 }
 
 
-#filters {
+#filters, #filters2 {
   display:inline-block;
 }
 
@@ -235,7 +235,7 @@ body {
   margin-bottom: 0.2em;
 }
 
-#options li a {
+#options li a, #options li span {
   display: block;
   padding: 0.4em 0.5em;
   /* background-color: #DDD; */
@@ -247,6 +247,7 @@ body {
   background-image:      -o-linear-gradient( top, hsla( 0, 0%, 100%, 0.5 ), hsla( 0, 0%, 100%, 0.0 ) );
   background-image:         linear-gradient( top, hsla( 0, 0%, 100%, 0.5 ), hsla( 0, 0%, 100%, 0.0 ) ); */
 }
+
 
 #options li a:hover {
   /* background-color: #5BF; */

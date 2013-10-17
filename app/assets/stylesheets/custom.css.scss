@@ -73,22 +73,22 @@ a:hover {
 	filter: alpha(opacity=90);/*for ie8*/
 }
 .overlay-green1 {
-	background-color: rgba(80, 177, 160, 0.15);
+	background-color: rgba(80, 177, 160, 0.85);
 }
 .overlay-green2 {
-	background-color: rgba(80, 177, 137, 0.15);
+	background-color: rgba(80, 177, 137, 0.85);
 }
 .overlay-blue {
-	background-color: rgba(14, 158, 199, 0.15);
+	background-color: rgba(14, 158, 199, 0.85);
 }
 .overlay-pink {
-	background-color: rgba(208, 66, 117, 0.15);
+	background-color: rgba(208, 66, 117, 0.85);
 }
 .overlay-brown {
-	background-color: rgba(214, 143, 42, 0.15);
+	background-color: rgba(214, 143, 42, 0.85);
 }
 .overlay-orange {
-	background-color: rgba(208, 110, 57, 0.15);
+	background-color: rgba(208, 110, 57, 0.85);
 }
 
 .overlay-white {
@@ -821,7 +821,6 @@ input[type=text], textarea {
 input[type=text] {
 	width: 99%;
 	height: 60px;
-	margin-bottom: 30px;
 	padding: 0 20px;
 	line-height: 60px;
 }

@@ -9,7 +9,7 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'factory_girl_rails'
 gem 'twitter'
 gem 'settingslogic'
-#gem 'turbolinks'
+gem 'turbolinks'
 
 group :development do
 	gem 'sqlite3'

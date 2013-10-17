@@ -1,4 +1,5 @@
-String.prototype.trunc =
+
+    String.prototype.trunc =
      function(n,useWordBoundary){
          var toLong = this.length>n,
              s_ = toLong ? this.substr(0,n-1) : this;
@@ -6,12 +7,12 @@ String.prototype.trunc =
          return  toLong ? s_ + '...' : s_;
       };
       
-var elasticservers = {"library.local": "http://localhost:3000", 
+    var elasticservers = {"library.local": "http://localhost:3000", 
                     "startupadelaide.fifthvertex.com": "http://s1.startupadelaide.fifthvertex.com/",
                     "default": "http://s1.startupadelaide.fifthvertex.com/",
                     };      
       
-var app = angular.module('fbsearch', ['ngResource', 'elasticjs.service'])
+    var app = angular.module('fbsearch', ['ngResource', 'elasticjs.service'])
     .controller('SearchCtrl',
         function ($scope, ejsResource, $location) {
             $scope.dateFormat = 'd MMM yyyy';
@@ -27,7 +28,6 @@ var app = angular.module('fbsearch', ['ngResource', 'elasticjs.service'])
               serverName = elasticservers['default']; 
             }
 
-            
             var ejs = ejsResource(serverName);
             var indicies = ['fbgroupfeed341576109215802', 'swadl'];
             var fbtype = 'feed';
@@ -131,4 +131,4 @@ var app = angular.module('fbsearch', ['ngResource', 'elasticjs.service'])
             }, 50);
             
         }
-);
+    );

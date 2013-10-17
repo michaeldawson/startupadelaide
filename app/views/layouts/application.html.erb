@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html <%= yield(:html_data) %>>
+<html <%#= yield(:html_data) %>>
 	<head>
 	  <title>Startup Adelaide</title>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>    
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular-resource.js"></script>
 
 		<%= stylesheet_link_tag    "application", :media => "all" %>
 		<%= javascript_include_tag "application" %>
@@ -21,7 +23,7 @@
 
 	<body <%= yield(:body_data) %> data-controller="<%= controller_name %>" data-action="<%= action_name %>">
 
-		<div id="pt-main" class="pt-perspective">
+		<div id="pt-main" class="pt-perspective" style="display:none">
 			<%= yield %>
 		</div>
 
