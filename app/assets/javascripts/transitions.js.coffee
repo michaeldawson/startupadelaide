@@ -1,4 +1,4 @@
-$(document).on 'page:fetch', ->
+$(document).on 'page:receive', ->
   $('#pt-main').fadeOut 'fast'
 
 #$(document).on 'page:change', ->

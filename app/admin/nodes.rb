@@ -10,6 +10,11 @@ ActiveAdmin.register Node do
 		
 		end
 
+		f.inputs "Who's it for?" do
+			f.input :targets, label: "Ideal for"
+			
+		end
+
 		f.inputs "Social Links" do
 			f.has_many :social_links do |ff|
 				ff.input :social_key, as: :select, collection: SocialLinkPrefill.all.map {|slp| slp.name}
