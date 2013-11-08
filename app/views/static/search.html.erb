@@ -74,8 +74,8 @@
           <div class="row" ng-show="searchresult.hits.total > 0">            
             <div class="offset1 span11"> 
               <span>Results {{startingResultNumber}} to {{endingResultNumber}} out of {{searchresult.hits.total}}</span>
-               <a href="#" ng-show="prevresults"  ng-click="search(page - 1)">&lt; Prev</a>&nbsp;
-               <a href="#" ng-show="moreresults"  ng-click="search(page + 1)">Next &gt;</a> 
+               <a ng-show="prevresults" class="ng_click" ng-click="search(page - 1)">&lt; Prev</a>&nbsp;
+               <a ng-show="moreresults" class="ng_click" ng-click="search(page + 1)">Next &gt;</a> 
             </div>         
           </div>        
         
