@@ -1,6 +1,6 @@
 class StaticController < ApplicationController
   def index
-  	
+  	@background_img=1
   end
 
   def about

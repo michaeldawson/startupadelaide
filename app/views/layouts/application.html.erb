@@ -14,7 +14,7 @@
 		<div class="outer-wrapper overlay-<%= @overlay_color %>">
 
 		      <!--Header-->
-      			<%= render 'layouts/header'%> 
+      			<%= render 'layouts/header' if !(controller.action_name == "index")%> 
 
 
 			<%= yield %>
