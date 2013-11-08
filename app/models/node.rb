@@ -2,7 +2,7 @@
 
 class Node < ActiveRecord::Base
   attr_accessible :category_id, :city, :contact, :name, :street, :social_links_attributes
-  attr_accessible :sponsor, :description, :owner, :phone, :champion, :champion_contact
+  attr_accessible :sponsor, :description, :owner, :phone, :champion, :champion_contact, :target_ids
 
   belongs_to :category
   has_and_belongs_to_many :targets
