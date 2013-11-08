@@ -4,7 +4,20 @@ STARTUP.static = {
   },
 
   index: function() {
+    $.ajax({
+        type: "GET",
+        dataType: "json",
+        url: "/ajax/tweets",
+        success: function(data){
+          $.each(data, function(index, element) {
+            $('#twitter').append($('<li>' + element.text + '</li>'));
+          });
 
+          $('.flexslider').flexslider({
+            animation: "slide", controlNav: false
+          });
+        }
+    });
   },
 
   search: function() {
@@ -311,19 +324,5 @@ STARTUP.static = {
       return false;
     });
 
-    $.ajax({
-        type: "GET",
-        dataType: "json",
-        url: "/ajax/tweets",
-        success: function(data){
-          $.each(data, function(index, element) {
-            $('#twitter').append($('<li>' + element.text + '</li>'));
-          });
-
-          $('.flexslider').flexslider({
-            animation: "slide", controlNav: false
-          });
-        }
-    });
   }
 }
