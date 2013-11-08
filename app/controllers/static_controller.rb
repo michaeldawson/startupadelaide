@@ -5,19 +5,27 @@ class StaticController < ApplicationController
 
   def about
     @overlay_color = "green1" 
+    @background_img=6
+    @header = "About"
   end
 
   def contact
     @overlay_color = "orange"
-    flash[:notice]="laksjdasgd"
+    @background_img=3
+    @header = "Get in touch"
   end
 
   def search
     @overlay_color = "pink" 
+    @background_img=7
+    @header = "Search the community"
   end
 
   def explore
     @overlay_color = "white" 
+    @background_img=4
+    @header = "Explore the community"
+
     @nodes = Node.all
     @categories = Category.all
     @targets = Target.all

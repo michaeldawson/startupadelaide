@@ -1,32 +1,30 @@
-<!DOCTYPE html>
-<html <%#= yield(:html_data) %>>
-	<head>
-	  <title>Startup Adelaide</title>
-		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>    
-		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular-resource.js"></script>
+<% content_for(:laid_out) do %>
 
-		<%= stylesheet_link_tag    "application", :media => "all" %>
-		<%= javascript_include_tag "application" %>
+	<%#= render 'layouts/flash_messages' %>
+		<% if flash.count > 0 %>
+			<% flash.each do |type, message| %>
+				<div class="alert <%= flash_class type %>">
+				<button class="close" data-dismiss="alert">x</button>
+				<%= message %>
+				</div>
+			<% end %>
+		<% end %> 
 
-		<%= csrf_meta_tags %>
+	<article class="pt-page bg-image<%= @background_img %>">
+		<div class="outer-wrapper overlay-<%= @overlay_color %>">
 
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-		<!--Bootstrap-->
+		      <!--Header-->
+      			<%= render 'layouts/header'%> 
 
-		<!--[if lt IE 9]>
-		<link href="css/ie8.css" rel="stylesheet" media="screen">
-		<script src="assets/html5shiv.js" type="text/javascript"></script>
-		<![endif]-->
-		<!--Background Images-->
 
-	</head>
-
-	<body <%= yield(:body_data) %> data-controller="<%= controller_name %>" data-action="<%= action_name %>">
-
-		<div id="pt-main" class="pt-perspective" style="display:none">
 			<%= yield %>
+      		<div class="push"><!--//--></div><!--Ryan Fait's Sticky Footer-->
+
 		</div>
 
-	</body>
+		<%= render 'layouts/footer' %>
+	</article>
 
-</html>
+<% end %>
+
+<%= render file: 'layouts/common' %>

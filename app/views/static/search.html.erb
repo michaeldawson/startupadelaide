@@ -2,10 +2,7 @@
 <% content_for(:html_data) {"ng-app=fbsearch"} %>
 <% content_for(:copyright) {"Nick Lothian. All content owned by the authors"} %>
 
-<article class="pt-page pt-page-3 bg-image7">
-  <div class="outer-wrapper overlay-<%= @overlay_color %>">
 
-      <%= render 'layouts/header', :@header => "Search the community" %>
     <section class="row-fluid">
 
     <%#= javascript_include_tag "elastic-min" %>
@@ -86,9 +83,3 @@
       </body>
     </section>
       
-    <div class="push"><!--//--></div><!--Ryan Fait's Sticky Footer-->
-  </div>
-<!--Footer-->
-<%= render 'layouts/footer' %>
-
-</article>
