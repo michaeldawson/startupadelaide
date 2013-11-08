@@ -42,6 +42,7 @@ class SiteConfiguration < ActiveRecord::Base
     setting :admin_email, "'brandycontent@gmail.com'", :string
     setting :contact_phone, "'0435 129 029'", :string
     setting :business_address, "'Lvl 2, 14 Grenfell St, Adelaide SA 5000'", :string
+    setting :twitter_url, "'https://twitter.com/StartupADL'", :string
  
   # Ensure all the defaults are created when the class file is read
   #self.ensure_created if ActiveRecord::Base.connection.table_exists? 'site_configurations'
