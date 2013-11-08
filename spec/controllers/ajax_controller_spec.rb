@@ -8,7 +8,7 @@ describe AjaxController do
 			end
 
 			3.times do
-				FactoryGirl.create(:tweet, :user_screen_name=>"Startupaus")
+				FactoryGirl.create(:tweet, :user_screen_name=>"StartupADL")
 			end
 		end
 

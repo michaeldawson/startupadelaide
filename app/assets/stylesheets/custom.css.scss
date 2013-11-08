@@ -800,7 +800,7 @@ a.load-more-btn:hover > p {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-input[type=text], textarea {
+input[type=text], textarea, input[type=email] {
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	border-radius: 0;
@@ -818,7 +818,7 @@ input[type=text], textarea {
 	-o-transition: opacity 250ms ease-out;
 	transition: opacity 250ms ease-out;
 }
-input[type=text] {
+input[type=text], input[type=email] {
 	width: 99%;
 	height: 60px;
 	padding: 0 20px;
@@ -826,7 +826,6 @@ input[type=text] {
 }
 textarea {
 	width: 99%;
-	float: right;
 	height: 150px;
 	min-height: 150px;
 	max-height: 150px;
@@ -835,7 +834,6 @@ textarea {
 	margin-bottom: 30px;
 }
 input[type=submit] {
-	float: right;
 	height: 60px;
 	line-height: 60px;
 	padding: 0 50px;

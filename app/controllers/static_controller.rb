@@ -9,6 +9,7 @@ class StaticController < ApplicationController
 
   def contact
     @overlay_color = "orange"
+    flash[:notice]="laksjdasgd"
   end
 
   def search

@@ -1,12 +1,23 @@
 <!--Our Team Screen-->
-<article class="pt-page pt-page-3 bg-image3" id="creators">
+<article class="bg-image3">
   <div class="outer-wrapper overlay-<%= @overlay_color %>">
     <!--Header-->
     <%= render 'layouts/header', :@header => "Get in touch" %>
     <!--Content-->
 
     <!-- contact section -->
-
+    <section class="row-fluid">
+      <div class="container">
+        <div class="span12">
+          <%= simple_form_for ContactMessage.new do |f| %>
+            <%= f.input :name, label: "Your name" %>
+            <%= f.input :email, label: "Your email"  %>
+            <%= f.input :message, label: "Anything nice you have to say" %>
+            <%= f.submit "Send" %>
+          <% end %>
+        </div>
+      </div>
+    </section>
 
     <!-- who built that section -->    
     <section class="row-fluid">
@@ -18,46 +29,11 @@
       <div class="container">
         <div class="span4 team-mate">
           <span class="figcap"></span>
-          <a href="#" title="Brandy Content">
-            <img src="assets/team/brandy.png" alt="">
-            <h2>Brandy Content</h2>
-            <h3>Site construction</h3>
-          </a>
-          <p>Brandy Content, a proudly South Australian media and development company. <a href="http://www.brandycontent.com/" target="_blank">Read more</a></p>
-          <ul class="social-bar2">
-            <li><a class="facebook-black" href="#" title="Facebook" target="_blank"></a></li>
-            <li><a class="twitter-black" href="#" title="Twitter" target="_blank"></a></li>
-            <li><a class="googleplus-black" href="#" title="Google+" target="_blank"></a></li>
-            <li><a class="linkedin-black" href="#" title="LinkedIn" target="_blank"></a></li>
-            <li><a class="behance-black" href="#" title="Behance" target="_blank"></a></li>
-          </ul>
-        </div>
-        <div class="span4 team-mate">
-          <span class="figcap"></span>
-          <a href="#" title="Someone else">
-            <img src="assets/team/brin.jpg" alt="">
-            <h2>Che Chorley</h2>
-            
-            <h3>All Photography</h3>
-          </a>
-          <p>Ché Chorley is a nationally and internationally published photographer, available for commercial, editorial and commissioned work. <a href="http://www.chechorley.com/" target="_blank">Read more</a></p>
-          <ul class="social-bar2">
-            <li><a class="facebook-black" href="#" title="Facebook" target="_blank"></a></li>
-            <li><a class="twitter-black" href="#" title="Twitter" target="_blank"></a></li>
-            <li><a class="googleplus-black" href="#" title="Google+" target="_blank"></a></li>
-            <li><a class="linkedin-black" href="#" title="LinkedIn" target="_blank"></a></li>
-            <li><a class="behance-black" href="#" title="Behance" target="_blank"></a></li>
-          </ul>
-        </div>
-
-
-        <div class="span4 team-mate">
-          <span class="figcap"></span>
-          <a href="#" title="Michael Dawson">
+          <%= link_to "http://majorandistillery.com", target: "_blank" do %>
             <img src="assets/team/majoran.png" alt="">
             <h2>The Majoran Distillery</h2>
             <h3>Coworking Space</h3>
-          </a>
+          <% end %>
           <p>A place to take technology startups to the next level. <a href="http://www.chechorley.com/" target="_blank">Read more</a></p>
           <ul class="social-bar2">
             <li><a class="facebook-black" href="#" title="Facebook" target="_blank"></a></li>
@@ -67,6 +43,41 @@
             <li><a class="behance-black" href="#" title="Behance" target="_blank"></a></li>
           </ul>
         </div>
+
+        <div class="span4 team-mate">
+          <span class="figcap"></span>
+          <%= link_to "http://brandycontent.com", target: "_blank" do %>
+            <img src="assets/team/brandy.png" alt="">
+            <h2>Brandy Content</h2>
+            <h3>Site construction</h3>
+          <% end %>
+          <p>Brandy Content, a proudly South Australian media and development company. <a href="http://www.brandycontent.com/" target="_blank">Read more</a></p>
+          <ul class="social-bar2">
+            <li><a class="facebook-black" href="#" title="Facebook" target="_blank"></a></li>
+            <li><a class="twitter-black" href="#" title="Twitter" target="_blank"></a></li>
+            <li><a class="googleplus-black" href="#" title="Google+" target="_blank"></a></li>
+            <li><a class="linkedin-black" href="#" title="LinkedIn" target="_blank"></a></li>
+            <li><a class="behance-black" href="#" title="Behance" target="_blank"></a></li>
+          </ul>
+        </div>
+
+        <div class="span4 team-mate">
+          <span class="figcap"></span>
+          <%= link_to "http://chechorley.com", target: "_blank" do %>
+            <img src="assets/team/brin.jpg" alt="">
+            <h2>Che Chorley</h2>
+            
+            <h3>Photography</h3>
+          <% end %>
+          <p>Ché Chorley is a nationally and internationally published photographer, available for commercial, editorial and commissioned work. <a href="http://www.chechorley.com/" target="_blank">Read more</a></p>
+          <ul class="social-bar2">
+            <li><a class="facebook-black" href="#" title="Facebook" target="_blank"></a></li>
+            <li><a class="twitter-black" href="#" title="Twitter" target="_blank"></a></li>
+            <li><a class="googleplus-black" href="#" title="Google+" target="_blank"></a></li>
+            <li><a class="linkedin-black" href="#" title="LinkedIn" target="_blank"></a></li>
+            <li><a class="behance-black" href="#" title="Behance" target="_blank"></a></li>
+          </ul>
+        </div>        
       </div>
     </section>
     <div class="push"><!--//--></div><!--Ryan Fait's Sticky Footer-->

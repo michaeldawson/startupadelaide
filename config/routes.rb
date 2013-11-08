@@ -1,5 +1,7 @@
 Map::Application.routes.draw do
 
+  resources :contact_messages, only: [:create]
+
   root :to => 'static#index'
 
   controller :static do

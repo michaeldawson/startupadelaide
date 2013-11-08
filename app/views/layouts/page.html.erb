@@ -2,8 +2,9 @@
 <% content_for :main do %>
 
 <%= render 'layouts/header' %>
+<%= render 'layouts/flash' %>
 
-<article class="pt-page pt-page-<%= @number %> bg-image<%= @number %>" id="<%= @page_id %>">
+<article class="pt-page bg-image<%= @number %>" id="<%= @page_id %>">
 	<div class="outer-wrapper overlay-blue">
 
 		<%= yield(:page_content) %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131003044607) do
+ActiveRecord::Schema.define(version: 20131108005850) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "resource_id",   null: false
@@ -54,6 +54,14 @@ ActiveRecord::Schema.define(version: 20131003044607) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "contact_messages", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "nodes", force: true do |t|
     t.integer  "category_id"
     t.string   "name"
@@ -76,6 +84,15 @@ ActiveRecord::Schema.define(version: 20131003044607) do
   end
 
   add_index "nodes_targets", ["node_id", "target_id"], name: "index_nodes_targets_on_node_id_and_target_id", unique: true
+
+  create_table "site_configurations", force: true do |t|
+    t.string   "key"
+    t.text     "value"
+    t.string   "form_type"
+    t.string   "form_collection_command"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "social_link_prefills", force: true do |t|
     t.string   "name"

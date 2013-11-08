@@ -7,10 +7,11 @@
 	  <li><a href="#explore" class="page-transition" onclick="gotoPageWithTrans1(4)">Explore</a></li>
  -->
 
-	  <li><%= link_to "About", about_path %></li>
-	  <li><%= link_to "Contact", contact_path %></li>
-	  <li><%= link_to "Search", search_path %></li>
-	  <li><%= link_to "Explore", explore_path %></li>
+		<li><%= controller.action_name.titleize %></li>
+		<li><%= link_to "About", about_path if !(controller.action_name == "about") %></li>
+		<li><%= link_to "Explore", explore_path if !(controller.action_name == "explore") %></li>
+		<li><%= link_to "Search", search_path if !(controller.action_name == "search") %></li>
+		<li><%= link_to "Contact", contact_path if !(controller.action_name == "contact") %></li>
 
 	</ul>
 </nav>
