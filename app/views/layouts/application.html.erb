@@ -1,21 +1,23 @@
 <% content_for(:laid_out) do %>
 
 	<%#= render 'layouts/flash_messages' %>
-		<% if flash.count > 0 %>
-			<% flash.each do |type, message| %>
-				<div class="alert <%= flash_class type %>">
-				<button class="close" data-dismiss="alert">x</button>
-				<%= message %>
-				</div>
-			<% end %>
-		<% end %> 
+
 
 	<article class="pt-page bg-image<%= @background_img %>">
 		<div class="outer-wrapper overlay-<%= @overlay_color %>">
 
 		      <!--Header-->
       			<%= render 'layouts/header' if !(controller.action_name == "index")%> 
-
+  					<% if flash.count > 0 %>
+  						<div class="container">
+							<% flash.each do |type, message| %>
+								<div class="alert <%= flash_class type %>">
+								<button class="close" data-dismiss="alert">x</button>
+								<%= message %>
+								</div>
+							<% end %>
+						</div>
+					<% end %> 
 
 			<%= yield %>
       		<div class="push"><!--//--></div><!--Ryan Fait's Sticky Footer-->
