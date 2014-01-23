@@ -27,7 +27,6 @@ ActiveAdmin.register Node do
 
 	index do 
 		
-
 		column :name
 		column :category
 		#column :what
@@ -51,3 +50,6 @@ ActiveAdmin.register Node do
 	  	end
 	end
 end
+
+
+
