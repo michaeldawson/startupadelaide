@@ -309,8 +309,14 @@ a.team {
 	background-color: #50b28a;
 	padding: 38px 10px 12px 10px;
 }
-a.resume {
+a.search {
 	background-color: #d8457a;
+	padding: 38px 10px 12px 10px;
+	margin-top: 30px;
+	margin-right: 10.06711409395973%;
+}
+a.blog {
+	background-color: #5c66c5;
 	padding: 38px 10px 12px 10px;
 	margin-top: 30px;
 }
@@ -323,12 +329,7 @@ a.contacts {
 	background-color: #c85141;
 	padding: 95px 10px 12px 10px;
 }
-a.blog {
-	background-color: #d8733b;
-	padding: 38px 10px 12px 10px;
-	margin: 30px 10.06711409395973% 0 0;
-}
-a.feedback {
+a.contact {
 	background-color: #d9912a;
 	padding: 52px 10px 12px 10px;
 }
@@ -685,7 +686,7 @@ a.blogpost:hover > .post-meta > .comments-icon {
 a.blogpost:hover > h2,
 a.blogpost:hover > .post-meta,
 a.blogpost:hover > p {
-	color: #d06e39;
+	color: rgb(14, 158, 199)
 }
 a.load-more-btn {
 	display: block;

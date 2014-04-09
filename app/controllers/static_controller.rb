@@ -3,6 +3,12 @@ class StaticController < ApplicationController
   	@background_img=1
   end
 
+  def blog
+    @overlay_color = "blue" 
+    @background_img=5
+    @header = "Blog"
+  end
+
   def about
     @overlay_color = "green1" 
     @background_img=6

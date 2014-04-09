@@ -1,6 +1,14 @@
 STARTUP.static = {
   init: function() {
     // controller-wide code
+
+    String.prototype.trunc =
+    function(n,useWordBoundary){
+       var toLong = this.length>n,
+           s_ = toLong ? this.substr(0,n-1) : this;
+       s_ = useWordBoundary && toLong ? s_.substr(0,s_.lastIndexOf(' ')) : s_;
+       return  toLong ? s_ + '...' : s_;
+    };
   },
 
   index: function() {
@@ -20,15 +28,7 @@ STARTUP.static = {
     });
   },
 
-  search: function() {
-    String.prototype.trunc =
-     function(n,useWordBoundary){
-         var toLong = this.length>n,
-             s_ = toLong ? this.substr(0,n-1) : this;
-         s_ = useWordBoundary && toLong ? s_.substr(0,s_.lastIndexOf(' ')) : s_;
-         return  toLong ? s_ + '...' : s_;
-      };
-      
+  search: function() {    
     var elasticservers = {"library.local": "http://localhost:3000", 
                     "startupadelaide.fifthvertex.com": "http://s1.startupadelaide.fifthvertex.com/",
                     "default": "http://s1.startupadelaide.fifthvertex.com/",
@@ -122,7 +122,6 @@ STARTUP.static = {
                             }
                         }
                     }
-                   
 
                     $scope.searchresult = searchresults;
 
@@ -193,39 +192,8 @@ STARTUP.static = {
     });
 
 
-    // var $optionSets = $('#options .option-set'),
-    //   $optionLinks = $optionSets.find('a');
 
-    // $optionLinks.click(function(){
-    // var $this = $(this);
-    // // don't proceed if already selected
-    // if ( $this.hasClass('selected') ) {
-    //   return false;
-    // }
-    // var $optionSet = $this.parents('.option-set');
-    // $optionSet.find('.selected').removeClass('selected');
-    // $this.addClass('selected');
-
-    // // make option object dynamically, i.e. { filter: '.my-filter-class' }
-    // var options = {},
-    //     key = $optionSet.attr('data-option-key'),
-    //     value = $this.attr('data-option-value');
-    // // parse 'false' as false boolean
-    // value = value === 'false' ? false : value;
-    // options[ key ] = value;
-    // if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
-    //   // changes in layout modes need extra logic
-    //   changeLayoutMode( $this, options )
-    // } else {
-    //   // otherwise, apply new options
-    //   $container.isotope( options );
-    // }
-
-    // return false;
-    // });
-
-
-
+    
     // filter buttons
     $('.option-set a').click(function(){
       var $this = $(this);

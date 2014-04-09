@@ -21,11 +21,14 @@
             <%= link_to about_path, class: "small-navi about page-transition" do %>
             	<i class="navi-icons about-icon"></i>About
             <% end %>
-            <%= link_to contact_path, class: "small-navi feedback page-transition" do %>
-            	<i class="navi-icons about-icon"></i>Contact
+            <%= link_to contact_path, class: "small-navi contact page-transition" do %>
+            	<i class="navi-icons feedback-icon"></i>Contact
             <% end %>
-            <%= link_to search_path, class: "middle-navi resume" do %>
-            	<i class="navi-icons about-icon"></i>Search
+            <%= link_to search_path, class: "small-navi search" do %>
+            	<i class="navi-icons resume-icon"></i>Search
+            <% end %>
+            <%= link_to blog_path, class: "small-navi blog" do %>
+              <i class="navi-icons blog-icon"></i>Blog
             <% end %>
           </div>
           <div class="span4">

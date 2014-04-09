@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
-gem 'rails', '4.0.0'
+
+gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -11,6 +11,7 @@ gem 'twitter'
 gem 'settingslogic'
 gem 'turbolinks'
 gem 'simple_form'
+gem "polyamorous", :github => "activerecord-hackery/polyamorous"
 
 group :development do
 	gem 'sqlite3'
@@ -27,6 +28,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 
 group :development, :test do
+  gem 'minitest'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'shoulda'

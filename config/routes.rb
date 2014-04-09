@@ -1,11 +1,14 @@
 Map::Application.routes.draw do
 
+  resources :blog_posts
+
   resources :contact_messages, only: [:create]
 
   root :to => 'static#index'
 
   controller :static do
     get "about", as: :about
+    get "blog", as: :blog
     get "contact", as: :contact
     get "search", as: :search
     get "explore", as: :explore

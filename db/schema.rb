@@ -19,14 +19,14 @@ ActiveRecord::Schema.define(version: 20131108005850) do
     t.integer  "author_id"
     t.string   "author_type"
     t.text     "body"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "namespace"
   end
 
   add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace"
-  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_admin_notes_on_resource_type_and_resource_id"
+  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
 
   create_table "admin_users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 20131108005850) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
@@ -50,8 +50,8 @@ ActiveRecord::Schema.define(version: 20131108005850) do
     t.string   "name"
     t.integer  "size"
     t.string   "cat_class"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "contact_messages", force: true do |t|
@@ -68,14 +68,14 @@ ActiveRecord::Schema.define(version: 20131108005850) do
     t.string   "contact"
     t.string   "street"
     t.string   "city"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "sponsor"
-    t.string   "description"
+    t.text     "description"
     t.string   "owner"
     t.string   "phone"
     t.string   "champion"
-    t.text     "champion_contact"
+    t.string   "champion_contact"
   end
 
   create_table "nodes_targets", id: false, force: true do |t|
@@ -96,37 +96,30 @@ ActiveRecord::Schema.define(version: 20131108005850) do
 
   create_table "social_link_prefills", force: true do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "social_links", force: true do |t|
     t.string   "link_url"
     t.string   "social_key"
     t.integer  "node_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "targets", force: true do |t|
     t.string   "name"
     t.string   "cat_class"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "tweets", force: true do |t|
-    t.string   "text"
+    t.text     "text"
     t.string   "user_screen_name"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-  end
-
-  create_table "twitter_data", force: true do |t|
-    t.string   "key"
-    t.string   "value"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
