@@ -15,6 +15,6 @@
 //= require jquery_ujs
 //= require elastic-min
 //= require_tree ./lib
-//= require ./app/setup 
-//= require ./app/static
 //= require transitions
+//= require setup 
+//= require_tree ./app

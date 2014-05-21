@@ -20,140 +20,19 @@ require 'spec_helper'
 
 describe BlogPostsController do
 
-  # This should return the minimal set of attributes required to create a valid
-  # BlogPost. As you add validations to BlogPost, be sure to
-  # adjust the attributes here as well.
-  let(:valid_attributes) { { "title" => "MyString" } }
-
-  # This should return the minimal set of values that should be in the session
-  # in order to pass any filters (e.g. authentication) defined in
-  # BlogPostsController. Be sure to keep this updated too.
-  let(:valid_session) { {} }
-
-  describe "GET index" do
-    it "assigns all blog_posts as @blog_posts" do
-      blog_post = BlogPost.create! valid_attributes
-      get :index, {}, valid_session
-      assigns(:blog_posts).should eq([blog_post])
-    end
-  end
-
-  describe "GET show" do
-    it "assigns the requested blog_post as @blog_post" do
-      blog_post = BlogPost.create! valid_attributes
-      get :show, {:id => blog_post.to_param}, valid_session
-      assigns(:blog_post).should eq(blog_post)
-    end
-  end
-
-  describe "GET new" do
-    it "assigns a new blog_post as @blog_post" do
-      get :new, {}, valid_session
-      assigns(:blog_post).should be_a_new(BlogPost)
-    end
-  end
-
-  describe "GET edit" do
-    it "assigns the requested blog_post as @blog_post" do
-      blog_post = BlogPost.create! valid_attributes
-      get :edit, {:id => blog_post.to_param}, valid_session
-      assigns(:blog_post).should eq(blog_post)
-    end
-  end
-
-  describe "POST create" do
-    describe "with valid params" do
-      it "creates a new BlogPost" do
-        expect {
-          post :create, {:blog_post => valid_attributes}, valid_session
-        }.to change(BlogPost, :count).by(1)
+  describe "GET 'index" do
+    context "with blog posts" do
+      before :each do
+        @blogs =[]
+        3.times do
+          @blogs << FactoryGirl.create(:blog_post)
+        end
       end
 
-      it "assigns a newly created blog_post as @blog_post" do
-        post :create, {:blog_post => valid_attributes}, valid_session
-        assigns(:blog_post).should be_a(BlogPost)
-        assigns(:blog_post).should be_persisted
+      it "assigns blog posts" do
+        get :index
+        assigns(:blog_posts).should == @blogs
       end
-
-      it "redirects to the created blog_post" do
-        post :create, {:blog_post => valid_attributes}, valid_session
-        response.should redirect_to(BlogPost.last)
-      end
-    end
-
-    describe "with invalid params" do
-      it "assigns a newly created but unsaved blog_post as @blog_post" do
-        # Trigger the behavior that occurs when invalid params are submitted
-        BlogPost.any_instance.stub(:save).and_return(false)
-        post :create, {:blog_post => { "title" => "invalid value" }}, valid_session
-        assigns(:blog_post).should be_a_new(BlogPost)
-      end
-
-      it "re-renders the 'new' template" do
-        # Trigger the behavior that occurs when invalid params are submitted
-        BlogPost.any_instance.stub(:save).and_return(false)
-        post :create, {:blog_post => { "title" => "invalid value" }}, valid_session
-        response.should render_template("new")
-      end
-    end
-  end
-
-  describe "PUT update" do
-    describe "with valid params" do
-      it "updates the requested blog_post" do
-        blog_post = BlogPost.create! valid_attributes
-        # Assuming there are no other blog_posts in the database, this
-        # specifies that the BlogPost created on the previous line
-        # receives the :update_attributes message with whatever params are
-        # submitted in the request.
-        BlogPost.any_instance.should_receive(:update).with({ "title" => "MyString" })
-        put :update, {:id => blog_post.to_param, :blog_post => { "title" => "MyString" }}, valid_session
-      end
-
-      it "assigns the requested blog_post as @blog_post" do
-        blog_post = BlogPost.create! valid_attributes
-        put :update, {:id => blog_post.to_param, :blog_post => valid_attributes}, valid_session
-        assigns(:blog_post).should eq(blog_post)
-      end
-
-      it "redirects to the blog_post" do
-        blog_post = BlogPost.create! valid_attributes
-        put :update, {:id => blog_post.to_param, :blog_post => valid_attributes}, valid_session
-        response.should redirect_to(blog_post)
-      end
-    end
-
-    describe "with invalid params" do
-      it "assigns the blog_post as @blog_post" do
-        blog_post = BlogPost.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        BlogPost.any_instance.stub(:save).and_return(false)
-        put :update, {:id => blog_post.to_param, :blog_post => { "title" => "invalid value" }}, valid_session
-        assigns(:blog_post).should eq(blog_post)
-      end
-
-      it "re-renders the 'edit' template" do
-        blog_post = BlogPost.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        BlogPost.any_instance.stub(:save).and_return(false)
-        put :update, {:id => blog_post.to_param, :blog_post => { "title" => "invalid value" }}, valid_session
-        response.should render_template("edit")
-      end
-    end
-  end
-
-  describe "DELETE destroy" do
-    it "destroys the requested blog_post" do
-      blog_post = BlogPost.create! valid_attributes
-      expect {
-        delete :destroy, {:id => blog_post.to_param}, valid_session
-      }.to change(BlogPost, :count).by(-1)
-    end
-
-    it "redirects to the blog_posts list" do
-      blog_post = BlogPost.create! valid_attributes
-      delete :destroy, {:id => blog_post.to_param}, valid_session
-      response.should redirect_to(blog_posts_url)
     end
   end
 

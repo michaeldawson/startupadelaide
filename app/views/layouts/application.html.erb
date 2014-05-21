@@ -1,13 +1,11 @@
 <% content_for(:laid_out) do %>
 
 	<%#= render 'layouts/flash_messages' %>
-
-
 	<article class="pt-page bg-image<%= @background_img %>">
 		<div class="outer-wrapper overlay-<%= @overlay_color %>">
 
 		      <!--Header-->
-      			<%= render 'layouts/header' if !(controller.action_name == "index")%> 
+      			<%= render 'layouts/header' if !(controller.action_name == "index" && controller.controller_name == "static") %> 
   					<% if flash.count > 0 %>
   						<div class="container">
 							<% flash.each do |type, message| %>
