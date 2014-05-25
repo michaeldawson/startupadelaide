@@ -34,5 +34,5 @@ UTIL = {
   },
 };
  
-$(document).ready( UTIL.init );
+// $(document).ready( UTIL.init );
 $(window).bind('page:change', UTIL.init );

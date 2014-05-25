@@ -1,3 +1,4 @@
+
 STARTUP.static = {
   init: function() {
     // controller-wide code
@@ -172,6 +173,7 @@ STARTUP.static = {
         }
     });
 
+    
     $container.isotope({
       itemSelector : '.element',
       masonry : {
@@ -190,8 +192,6 @@ STARTUP.static = {
       },
       
     });
-
-
 
     
     // filter buttons
@@ -234,17 +234,15 @@ STARTUP.static = {
 
 
 
-    setTimeout(function(){
-      $container.delegate( '.element', 'click', function(){
-          $(this).toggleClass('large');
-          $(this).toggleClass('white-bg', 1000);
-          $(this).find(".large_show").toggleClass('hidden')
-          
-          $container.isotope('reLayout');
-      });
-    }, 1000)
+
     // change size of clicked element
-    
+    console.log($container.find('.element'));
+    $container.find('.element').click(function(){
+        $(this).toggleClass('large');
+        $(this).toggleClass('white-bg', 1000);
+        $(this).find(".large_show").toggleClass('hidden')
+        $container.isotope('reLayout');
+    });
 
     //Prevent Fake Browser Navigation
     // var naviLink = $('.page-transition');
