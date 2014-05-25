@@ -13,8 +13,7 @@
 //= require turbolinks
 //= require jquery
 //= require jquery_ujs
-//= require elastic-min
+//= require_tree ./base
 //= require_tree ./lib
-//= require transitions
 //= require setup 
 //= require_tree ./app
