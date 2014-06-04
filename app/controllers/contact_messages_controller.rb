@@ -1,4 +1,5 @@
 class ContactMessagesController < InheritedResources::Base
+# attr_accessible :name, :email, :message
 
 	def create
 	  	@contact_message = ContactMessage.new(params[:contact_message])

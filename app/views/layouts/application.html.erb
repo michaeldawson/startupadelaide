@@ -4,26 +4,31 @@
 	<article class="pt-page bg-image<%= @background_img %>">
 		<div class="outer-wrapper overlay-<%= @overlay_color %>">
 
-		      <!--Header-->
-      			<%= render 'layouts/header' if !(controller.action_name == "index" && controller.controller_name == "static") %> 
-  					<% if flash.count > 0 %>
-  						<div class="container">
-							<% flash.each do |type, message| %>
-								<div class="alert <%= flash_class type %>">
-								<button class="close" data-dismiss="alert">x</button>
-								<%= message %>
-								</div>
-							<% end %>
+      <!--Header-->
+  			<%= render 'layouts/header' if !(controller.action_name == "index" && controller.controller_name == "static") %> 
+				<% if flash.count > 0 %>
+					<div class="container">
+					<% flash.each do |type, message| %>
+						<div class="alert <%= flash_class type %>">
+						<button class="close" data-dismiss="alert">x</button>
+						<%= message %>
 						</div>
-					<% end %> 
+					<% end %>
+				</div>
+			<% end %> 
 
 			<%= yield %>
-      		<div class="push"><!--//--></div><!--Ryan Fait's Sticky Footer-->
+			
+      <div class="push"><!--//--></div><!--Ryan Fait's Sticky Footer-->
 
 		</div>
 
 		<%= render 'layouts/footer' %>
 	</article>
+<!-- 
+	<div id="loader" class="hidden">
+		<%= image_tag "ajax-loader.gif" %>
+	</div> -->
 
 <% end %>
 

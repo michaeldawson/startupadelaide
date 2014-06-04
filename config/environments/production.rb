@@ -13,9 +13,10 @@ Map::Application.configure do
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
+  config.eager_load = true  
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = true
+  config.assets.compile = false
 
   # Generate digests for assets URLs
   config.assets.digest = true

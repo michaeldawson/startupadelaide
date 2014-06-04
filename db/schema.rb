@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140409233101) do
+ActiveRecord::Schema.define(version: 20140604035603) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "resource_id",   null: false
@@ -54,9 +54,35 @@ ActiveRecord::Schema.define(version: 20140409233101) do
     t.integer  "admin_user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "blogger_id"
   end
 
   add_index "blog_posts", ["admin_user_id"], name: "index_blog_posts_on_admin_user_id"
+  add_index "blog_posts", ["blogger_id"], name: "index_blog_posts_on_blogger_id"
+
+  create_table "bloggers", force: true do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
+  end
+
+  add_index "bloggers", ["email"], name: "index_bloggers_on_email", unique: true
+  add_index "bloggers", ["reset_password_token"], name: "index_bloggers_on_reset_password_token", unique: true
 
   create_table "categories", force: true do |t|
     t.string   "name"

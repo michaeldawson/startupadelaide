@@ -1,0 +1,70 @@
+// Place all the styles related to the static controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#pt-main {
+transition: opacity 1s;
+-webkit-transition: opacity 1s;
+}
+
+
+.intro h2 {
+    margin-top:25px;
+}
+
+footer {
+    h2 {
+        color:#fff;
+    }
+}
+
+ 
+img {
+    margin:5px;
+}
+ 
+.isotope-item {
+    z-index: 2;
+    width: 150px;
+    min-height: 50px;
+    font-size: 16px;
+    margin:5px;
+}
+
+
+.isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1;
+}
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+ 
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    transition-property: height, width;
+}
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    transition-property: transform, opacity;
+}
+
+
+.twitter {
+    text-align: center
+}
+
+.twitter_box {
+    height:300px;
+    overflow:hidden;
+}
+
+.team-mate a {
+    color:#333!important;
+}

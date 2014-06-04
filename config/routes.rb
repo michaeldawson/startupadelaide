@@ -1,5 +1,6 @@
 Map::Application.routes.draw do
 
+  devise_for :bloggers
   resources :blog_posts
 
   resources :contact_messages, only: [:create]
@@ -8,7 +9,6 @@ Map::Application.routes.draw do
 
   controller :static do
     get "about", as: :about
-    get "blog", as: :blog
     get "contact", as: :contact
     get "search", as: :search
     get "explore", as: :explore

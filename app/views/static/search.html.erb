@@ -2,84 +2,74 @@
 <% content_for(:html_data) {"ng-app=fbsearch"} %>
 <% content_for(:copyright) {"Nick Lothian. All content owned by the authors"} %>
 
+<section class="row-fluid">
 
-    <section class="row-fluid">
+<%= javascript_include_tag "controllers" %>
 
-    <%#= javascript_include_tag "elastic-min" %>
-    <%#= javascript_include_tag "elastic-angular-client" %>
-
-    <%= javascript_include_tag "controllers" %>
-
-         <div class="container" id="wrap">
-          <div class="hero-unit">
-            <div  class="row">
-              <div id="showNotes" class="hidden">
-                <h3>This is an alpha release!!</h3>
-                <small>
-                The following issues are known:
-                <ul>
-                  <li>Doesn't work in IE versions below 10. I think this is the lack of CORS support, but haven't really investigated.</li>
-                  <li>Doesn't work in Opera.</li>
-                  <li>Facebook indexing is manual. This is due to the lack of an easy way to get a long-lived access token. I'll get to that eventually.</li>
-                  <li>Feedback is welcome! <a href="http://twitter.com/nlothian">@nlothian</a>, or nick.lothian at gmail.com</li>
-                </ul>
-                </small>
-              </div>
-            </div>
-            <div class="row">
-                <div class="offset1 span8 text-center">
-                  <form class="form-inline" ng-submit="search(0)">
-                      <input class="input-xlarge" ng-model="queryTerm" type="text" 
-                          placeholder="Enter a keyword" autofocus>
-                        <button class="search" type="submit">Search</button>
-                  </form>
-                </div>
-            </div>
-            <div class="row">
-              <div class="span11">
-                &nbsp;
-              </div>
-            </div>
-          </div>  
-
-          <div class="row" ng-repeat="entry in searchresult.entries" >
-            <div class="offset1 span11">
-
-              <a href="{{entry.link}}">{{entry.title}}</a>
-
-              <div class="row">     
-                <div ng-hide="!entry.has_thumbnail" ng-if="entry.has_thumbnail" class="span1">
-                  <a href="{{entry.link}}"><img ng-src="{{entry.thumbnail}}"></a>
-                </div>
-                <div class="span9">              
-                  <cite class="resource"><a href="{{entry.link}}">{{entry.link}}</a></cite>            
-                  <p>
-                    {{entry.description}}
-                    <br />
-                    <span class="resource" ng-show="entry.author != null">Posted by {{entry.author}} on</span> <span class="resource">{{entry.created_time | date:dateFormat }}</span>
-                  </p>                                                                                                                                      
-                  
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="span11">
-                  &nbsp;
-                </div>
-              </div>
-            </div>
-          </div>
-          
-
-          <div class="row" ng-show="searchresult.hits.total > 0">            
-            <div class="offset1 span11"> 
-              <span>Results {{startingResultNumber}} to {{endingResultNumber}} out of {{searchresult.hits.total}}</span>
-               <a ng-show="prevresults" class="ng_click" ng-click="search(page - 1)">&lt; Prev</a>&nbsp;
-               <a ng-show="moreresults" class="ng_click" ng-click="search(page + 1)">Next &gt;</a> 
-            </div>         
-          </div>        
-        
+  <div class="container" id="wrap">
+    <div class="hero-unit">
+      <div  class="row">
+        <div id="showNotes" class="hidden">
+          <h3>This is an alpha release!!</h3>
+          <small>
+          The following issues are known:
+          <ul>
+            <li>Doesn't work in IE versions below 10. I think this is the lack of CORS support, but haven't really investigated.</li>
+            <li>Doesn't work in Opera.</li>
+            <li>Facebook indexing is manual. This is due to the lack of an easy way to get a long-lived access token. I'll get to that eventually.</li>
+            <li>Feedback is welcome! <a href="http://twitter.com/nlothian">@nlothian</a>, or nick.lothian at gmail.com</li>
+          </ul>
+          </small>
         </div>
-      </body>
-    </section>
-      
+      </div>
+      <div class="row">
+        <div class="offset1 span8 text-center">
+          <form class="form-inline" ng-submit="search(0)">
+            <input class="input-xlarge" ng-model="queryTerm" type="text" 
+            placeholder="Enter a keyword" autofocus>
+            <button class="search" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span11">
+          &nbsp;
+        </div>
+      </div>
+    </div>
+
+    <div class="row" ng-repeat="entry in searchresult.entries" >
+      <div class="offset1 span11">
+        <a href="{{entry.link}}">{{entry.title}}</a>
+        <div class="row">     
+          <div ng-hide="!entry.has_thumbnail" ng-if="entry.has_thumbnail" class="span1">
+            <a href="{{entry.link}}"><img ng-src="{{entry.thumbnail}}"></a>
+          </div>
+          <div class="span9">              
+            <cite class="resource"><a href="{{entry.link}}">{{entry.link}}</a></cite>            
+            <p>
+              {{entry.description}}
+              <br />
+              <span class="resource" ng-show="entry.author != null">Posted by {{entry.author}} on</span> <span class="resource">{{entry.created_time | date:dateFormat }}</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="span11">
+            &nbsp;
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" ng-show="searchresult.hits.total > 0">            
+      <div class="offset1 span11"> 
+        <span>Results {{startingResultNumber}} to {{endingResultNumber}} out of {{searchresult.hits.total}}</span>
+         <a ng-show="prevresults" class="ng_click" ng-click="search(page - 1)">&lt; Prev</a>&nbsp;
+         <a ng-show="moreresults" class="ng_click" ng-click="search(page + 1)">Next &gt;</a> 
+      </div>         
+    </div>
+  </div>
+</section>
+  

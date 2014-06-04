@@ -1,10 +1,10 @@
 # app/models/site_configuration.rb
  
 class SiteConfiguration < ActiveRecord::Base
-	attr_accessible :key
-	attr_accessible :value
-	attr_accessible :form_type
-	attr_accessible :form_collection_command
+	# attr_accessible :key
+	# attr_accessible :value
+	# attr_accessible :form_type
+	# attr_accessible :form_collection_command
 
   serialize :value
  

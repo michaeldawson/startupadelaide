@@ -1,11 +1,7 @@
 class Category < ActiveRecord::Base
-  attr_accessible :name, :size, :cat_class
-
   has_many :nodes
 
-  before_create :set_cat_class
-
-  def set_cat_class
-  	self.cat_class=self.name.parameterize.underscore
+  def css_friendly_name
+    self.name.parameterize.underscore
   end
 end

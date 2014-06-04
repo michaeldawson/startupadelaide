@@ -1,19 +1,9 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @blog_post.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @blog_post.body %>
-</p>
-
-<p>
-  <strong>Admin user:</strong>
-  <%= @blog_post.admin_user %>
-</p>
-
-<%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
-<%= link_to 'Back', blog_posts_path %>
+<section class="row-fluid">
+  <div class="single-post-content">
+    <div class="container">
+      <h2><%= @blog_post.title %></h2>
+      <span class="post-meta"><%= @blog_post.meta %>
+      <p><%= @blog_post.body.html_safe %></p>
+    </div>
+  </div>
+</section>

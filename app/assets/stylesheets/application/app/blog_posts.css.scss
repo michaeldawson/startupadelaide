@@ -1,0 +1,85 @@
+
+.blogpost-row {
+  margin: 30px 0;
+}
+a.blogpost {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a.blogpost > h2, 
+a.blogpost > .post-meta,
+a.blogpost > p {
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  -webkit-transition: color 250ms ease-out;
+  -moz-transition: color 250ms ease-out;
+  -o-transition: color 250ms ease-out;
+  transition: color 250ms ease-out;
+}
+a.blogpost > h2 {
+  font-size: 1.8em ;
+}
+.post-meta {
+  display: block;
+  font-size: 0.75em;
+  color: #fff;
+  opacity: 0.5;
+  filter: alpha(opacity=50);/*for ie8*/
+  margin: 0 0 30px 0;
+}
+a.blogpost > p {
+  font-size: 0.84em !important;
+}
+.comments-icon {
+  display: inline-block;
+  width: 13px;
+  height: 12px;
+  background: image-url('comments-icon.png') no-repeat 0px 0px;
+}
+a.blogpost:hover {
+  text-decoration: none !important;
+}
+a.blogpost:hover .post-meta > .comments-icon {
+  background-position: -13px 0px;
+}
+a.blogpost:hover > h2,
+a.blogpost:hover .post-meta,
+a.blogpost:hover > p {
+  color: rgb(14, 158, 199)
+}
+a.load-more-btn {
+  display: block;
+  width: 100%;
+  padding: 18px 0;
+  position: relative;
+}
+a.load-more-btn > p {
+  font-size: 1em;
+  color: #fff;
+  text-align: center;
+  line-height: 1;
+  position: relative;
+  z-index: 2;
+  -webkit-transition: color 250ms ease-out;
+  -moz-transition: color 250ms ease-out;
+  -o-transition: color 250ms ease-out;
+  transition: color 250ms ease-out;
+}
+a.load-more-btn:hover > p {
+  color: #d06e39 !important;
+}
+.single-post-content h2 {
+  font-size: 2.2em;
+}
+.single-post-content p {
+  font-size: 1.05em;
+  color: #fff;
+  margin: 60px 0;
+  line-height: 2;
+}

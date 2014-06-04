@@ -1,15 +1,17 @@
 <header class="row-fluid">
   <div class="container">
-    <div class="span1 relative">
+    <div class="col-sm-2 relative">
     	<div class="page-navi">
-      	<%= link_to "", root_path, class: "home-page page-transition" %>
+      	<%= link_to root_path, class: "home-page page-transition" do %>
+          
+        <% end %>
       </div>
     </div>
 
-    <div class="span8">
+    <div class="col-sm-7">
       <h1><%= @header %></h1> 
     </div>
-    <div class="span3">
+    <div class="col-sm-3">
       <%= render 'layouts/nav' %>
     </div>
   </div>

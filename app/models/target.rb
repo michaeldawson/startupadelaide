@@ -1,5 +1,4 @@
 class Target < ActiveRecord::Base
-  attr_accessible :name
 
   before_create :set_cat_class
 

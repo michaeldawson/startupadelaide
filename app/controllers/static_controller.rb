@@ -22,6 +22,7 @@ class StaticController < ApplicationController
   end
 
   def explore
+
     @overlay_color = "white" 
     @background_img=4
     @header = "Explore the community"

@@ -1,62 +1,62 @@
 
-    <!--Header-->
-    <header class="row-fluid">
-      <div class="container">
-        <div class="span8 logo">
-          <h1>Startup Adelaide</h1>
-        </div>
-        <div class="span4 intro">
-          <h2>an explorer's guide</h2>
-        </div>
+<!--Header-->
+<header class="row-fluid">
+  <div class="container">
+    <div class="col-md-8 logo">
+      <h1>Startup Adelaide</h1>
+    </div>
+    <div class="col-md-4 intro">
+      <h2>an explorer's guide</h2>
+    </div>
+  </div>
+</header>
+<!--Navigation-->
+<nav class="navi row-fluid transparent">
+  <div class="container">
+    <div class="col-md-12 clearfix">
+      <div class="col-md-4">
+        <!-- <a class="small-navi about page-transition" href="#about" onclick="gotoPageWithTrans1(1)" title="About Us"><i class="navi-icons about-icon"></i>About</a>
+        <a class="small-navi feedback page-transition" href="#feedback" onclick="gotoPageWithTrans1(6)" title="Feedback"><i class="navi-icons feedback-icon"></i>Contact</a>
+        <a class="middle-navi resume" href="#starting" onclick="gotoPageWithTrans1(3)" title="Resume"><i class="navi-icons contacts-icon"></i>Search</a> -->
+        <%= link_to about_path, class: "small-navi about page-transition" do %>
+        	<i class="navi-icons about-icon"></i>About
+        <% end %>
+        <%= link_to contact_path, class: "small-navi contact page-transition" do %>
+        	<i class="navi-icons feedback-icon"></i>Contact
+        <% end %>
+        <%= link_to search_path, class: "small-navi search" do %>
+        	<i class="navi-icons fa fa-search fa-3x fa-icon"></i>Search
+        <% end %>
+        <%= link_to blog_posts_path, class: "small-navi blog" do %>
+          <i class="navi-icons blog-icon"></i>Blog
+        <% end %>
       </div>
-    </header>
-    <!--Navigation-->
-    <nav class="navi row-fluid transparent">
-      <div class="container">
-        <div class="span12 clearfix">
-          <div class="span4">
-            <!-- <a class="small-navi about page-transition" href="#about" onclick="gotoPageWithTrans1(1)" title="About Us"><i class="navi-icons about-icon"></i>About</a>
-            <a class="small-navi feedback page-transition" href="#feedback" onclick="gotoPageWithTrans1(6)" title="Feedback"><i class="navi-icons feedback-icon"></i>Contact</a>
-            <a class="middle-navi resume" href="#starting" onclick="gotoPageWithTrans1(3)" title="Resume"><i class="navi-icons contacts-icon"></i>Search</a> -->
-            <%= link_to about_path, class: "small-navi about page-transition" do %>
-            	<i class="navi-icons about-icon"></i>About
-            <% end %>
-            <%= link_to contact_path, class: "small-navi contact page-transition" do %>
-            	<i class="navi-icons feedback-icon"></i>Contact
-            <% end %>
-            <%= link_to search_path, class: "small-navi search" do %>
-            	<i class="navi-icons resume-icon"></i>Search
-            <% end %>
-            <%= link_to blog_posts_path, class: "small-navi blog" do %>
-              <i class="navi-icons blog-icon"></i>Blog
-            <% end %>
-          </div>
-          <div class="span4">
-          	<%= link_to explore_path, class: "big-navi contacts page-transition" do %>
-            	<i class="navi-icons works-icon"></i>Explore
-            <% end %>
-          </div>
+      <div class="col-md-4">
+      	<%= link_to explore_path, class: "big-navi contacts page-transition" do %>
+        	<i class="navi-icons works-icon"></i>Explore
+        <% end %>
+      </div>
+      
+      <div class="col-md-4">
+        <div class = 'flexslider big-navi navi-icons twitter'>
           
-          <div class="span4">
-            <div class = 'flexslider big-navi navi-icons twitter'>
-              
-              <%= link_to SiteConfiguration.twitter_url, target: "_blank", style: "text-align:centre" do %> 
-                <i class="icon-3x icon-twitter"></i><br/>
-                #startupadl
+          <%= link_to SiteConfiguration.twitter_url, target: "_blank", style: "text-align:centre" do %> 
+            <i class="icon-3x icon-twitter"></i><br/>
+            #startupadl
 
-              <% end %> 
-              
-              <ul class="slides" id="twitter">
+          <% end %> 
+          
+          <ul class="slides" id="twitter">
 
 
-              </ul>
-            </div>
-            <!--a class="small-navi blog page-transition" href="#creators" onclick="gotoPageWithTrans1(5)" title="Creators"><i class="navi-icons blog-icon"></i>Creators</a>
-            <a class="small-navi feedback page-transition" href="#feedback" onclick="gotoPageWithTrans1(6)" title="Feedback"><i class="navi-icons feedback-icon"></i>Feedback</a-->
-          </div>
-
-
-
+          </ul>
         </div>
+        <!--a class="small-navi blog page-transition" href="#creators" onclick="gotoPageWithTrans1(5)" title="Creators"><i class="navi-icons blog-icon"></i>Creators</a>
+        <a class="small-navi feedback page-transition" href="#feedback" onclick="gotoPageWithTrans1(6)" title="Feedback"><i class="navi-icons feedback-icon"></i>Feedback</a-->
       </div>
-    </nav>
+
+
+
+    </div>
+  </div>
+</nav>
