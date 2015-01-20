@@ -2,7 +2,7 @@
 <!-- contact section -->
 <section class="row-fluid">
   <div class="container">
-    <div class="span12">
+    <div class="col-sm-12">
       <%= simple_form_for ContactMessage.new do |f| %>
         <%= f.input :name, label: "Your name" %>
         <%= f.input :email, label: "Your email"  %>
@@ -16,62 +16,64 @@
 <!-- who built that section -->    
 <section class="row-fluid">
   <div class="container">
-    <div class="span12">
+    <div class="col-sm-12">
       <p>This site was built with love out of the Majoran Distillery, Adelaide's premier technology coworking space.</p>
     </div>
   </div>
-  <div class="container">
-    <div class="span4 team-mate">
-      <span class="figcap"></span>
-      <%= link_to "http://majorandistillery.com", target: "_blank" do %>
-        <img src="assets/team/majoran.png" alt="">
-        <h2>The Majoran Distillery</h2>
-        <h3>Coworking Space</h3>
-      <% end %>
-      <p>A place to take technology startups to the next level. <a href="http://www.chechorley.com/" target="_blank">Read more</a></p>
-      <ul class="social-bar2">
-        <li><a class="facebook-black" href="#" title="Facebook" target="_blank"></a></li>
-        <li><a class="twitter-black" href="#" title="Twitter" target="_blank"></a></li>
-        <li><a class="googleplus-black" href="#" title="Google+" target="_blank"></a></li>
-        <li><a class="linkedin-black" href="#" title="LinkedIn" target="_blank"></a></li>
-        <li><a class="behance-black" href="#" title="Behance" target="_blank"></a></li>
-      </ul>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="team-mate">
+          <span class="figcap"></span>
+          <%= link_to "http://majorandistillery.com", target: "_blank" do %>
+            <%= image_tag 'team/majoran.png' %>
+            <h2>The Majoran Distillery</h2>
+            <h3>Coworking Space</h3>
+          <% end %>
+          <p>A place to take technology startups to the next level. <a href="http://www.chechorley.com/" target="_blank">Read more</a></p>
+          <ul class="social-bar2">
+            <li><a class="facebook-black" href="#" title="Facebook" target="_blank"></a></li>
+            <li><a class="twitter-black" href="#" title="Twitter" target="_blank"></a></li>
+            <li><a class="googleplus-black" href="#" title="Google+" target="_blank"></a></li>
+            <li><a class="linkedin-black" href="#" title="LinkedIn" target="_blank"></a></li>
+            <li><a class="behance-black" href="#" title="Behance" target="_blank"></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="team-mate">
+          <span class="figcap"></span>
+          <%= link_to "http://brandycontent.com", target: "_blank" do %>
+            <%= image_tag 'team/brandy.png' %>
+            <h2>Brandy Content</h2>
+            <h3>Site construction</h3>
+          <% end %>
+          <p>Brandy Content, a proudly South Australian media and development company. <a href="http://www.brandycontent.com/" target="_blank">Read more</a></p>
+          <ul class="social-bar2">
+            <li><a class="facebook-black" href="#" title="Facebook" target="_blank"></a></li>
+            <li><a class="twitter-black" href="#" title="Twitter" target="_blank"></a></li>
+            <li><a class="googleplus-black" href="#" title="Google+" target="_blank"></a></li>
+            <li><a class="linkedin-black" href="#" title="LinkedIn" target="_blank"></a></li>
+            <li><a class="behance-black" href="#" title="Behance" target="_blank"></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="team-mate">
+          <span class="figcap"></span>
+          <p>Ché Chorley is a nationally and internationally published photographer, available for commercial, editorial and commissioned work. <a href="http://www.chechorley.com/" target="_blank">Read more</a></p>
+          
+          <br/>
+          <br/>
+          <%= link_to "http://chechorley.com", target: "_blank" do %>
+            <h2>Che Chorley</h2>
+            <h3>Photography</h3>
+          <% end %>
+        </div>        
+      </div>
     </div>
+  </section>
 
-    <div class="span4 team-mate">
-      <span class="figcap"></span>
-      <%= link_to "http://brandycontent.com", target: "_blank" do %>
-        <img src="assets/team/brandy.png" alt="">
-        <h2>Brandy Content</h2>
-        <h3>Site construction</h3>
-      <% end %>
-      <p>Brandy Content, a proudly South Australian media and development company. <a href="http://www.brandycontent.com/" target="_blank">Read more</a></p>
-      <ul class="social-bar2">
-        <li><a class="facebook-black" href="#" title="Facebook" target="_blank"></a></li>
-        <li><a class="twitter-black" href="#" title="Twitter" target="_blank"></a></li>
-        <li><a class="googleplus-black" href="#" title="Google+" target="_blank"></a></li>
-        <li><a class="linkedin-black" href="#" title="LinkedIn" target="_blank"></a></li>
-        <li><a class="behance-black" href="#" title="Behance" target="_blank"></a></li>
-      </ul>
-    </div>
-
-    <div class="span4 team-mate">
-      <span class="figcap"></span>
-      <%= link_to "http://chechorley.com", target: "_blank" do %>
-        <img src="assets/team/brin.jpg" alt="">
-        <h2>Che Chorley</h2>
-        
-        <h3>Photography</h3>
-      <% end %>
-      <p>Ché Chorley is a nationally and internationally published photographer, available for commercial, editorial and commissioned work. <a href="http://www.chechorley.com/" target="_blank">Read more</a></p>
-      <ul class="social-bar2">
-        <li><a class="facebook-black" href="#" title="Facebook" target="_blank"></a></li>
-        <li><a class="twitter-black" href="#" title="Twitter" target="_blank"></a></li>
-        <li><a class="googleplus-black" href="#" title="Google+" target="_blank"></a></li>
-        <li><a class="linkedin-black" href="#" title="LinkedIn" target="_blank"></a></li>
-        <li><a class="behance-black" href="#" title="Behance" target="_blank"></a></li>
-      </ul>
-    </div>        
-  </div>
-</section>
-
+</div>
