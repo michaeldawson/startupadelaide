@@ -1,20 +1,15 @@
 ActiveAdmin.register Node do
-	permit_params :name, :category_id, :description, :target_ids, social_links_attributes: [:social_key, :link_url]
+	permit_params :name, :category_id, :description, :target_ids, social_links_attributes: [:id, :social_key, :link_url]
 
 	form do |f|
 		f.inputs do
 			f.input :name
 			f.input :category, as: :select, collection: Category.all
 			f.input :description, as: :text
-
-			#f.input :who_for, label: "Who's it for?"
-			#f.input :more, label: "How can we find out more?"
-		
 		end
 
 		f.inputs "Who's it for?" do
 			f.input :targets, label: "Ideal for"
-			
 		end
 
 		f.inputs "Social Links" do
