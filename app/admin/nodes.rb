@@ -15,8 +15,7 @@ ActiveAdmin.register Node do
 		f.inputs "Social Links" do
 			f.has_many :social_links do |ff|
 				ff.input :social_key, as: :select, collection: SocialLinkPrefill.all.map {|slp| slp.name}
-				ff.input :link_url
-				ff.input :_destroy, label: "Remove"
+				ff.input :link_url, label: "Link URL - please ensure this starts with with http://"
 			end
 		end
 
