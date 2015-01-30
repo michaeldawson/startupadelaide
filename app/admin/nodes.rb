@@ -1,4 +1,6 @@
 ActiveAdmin.register Node do
+	permit_params :name, :category, :description, :targets, :social_links_attributes
+
 	form do |f|
 		f.inputs do
 			f.input :name

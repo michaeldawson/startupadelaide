@@ -21,6 +21,6 @@ class Node < ActiveRecord::Base
 	end
 
 	def classes 
-		 "#{self.category.css_friendly_name if self.category} #{self.targets.map{|t| t.cat_class }.join(' ')}"
+		 "#{self.category.css_friendly_name if self.category} #{self.targets.map{|t| t.css_friendly_name }.join(' ')}"
 	end
 end
