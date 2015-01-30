@@ -35,5 +35,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'shoulda'
+  gem 'quiet_assets'
 end
 
