@@ -1,5 +1,5 @@
 ActiveAdmin.register Node do
-	permit_params :name, :category_id, :description, :target_ids, social_links_attributes: [:id, :social_key, :link_url]
+	permit_params :name, :category_id, :description, :target_ids, social_links_attributes: [:id, :social_key, :link_url, :_destroy]
 
 	form do |f|
 		f.inputs do
@@ -16,6 +16,7 @@ ActiveAdmin.register Node do
 			f.has_many :social_links do |ff|
 				ff.input :social_key, as: :select, collection: SocialLinkPrefill.all.map {|slp| slp.name}
 				ff.input :link_url
+				ff.input :_destroy, label: "Remove"
 			end
 		end
 
